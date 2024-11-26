@@ -573,7 +573,7 @@ const Test = () => {
       end: "bottom center",
       pin: true,
       pinSpacing: false,
-      markers: true,
+      markers: false,
     });
 
     // Animate screens based on scroll position
