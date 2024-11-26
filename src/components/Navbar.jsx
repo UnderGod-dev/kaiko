@@ -64,18 +64,20 @@ const Navbar = () => {
       </Link>
 
       {/* Desktop Navigation */}
-      <nav className="hidden lg:block border border-white/15 shadow-2xl py-1.5 px-2 backdrop-blur-lg rounded bg-white/5">
-        <ul className="flex items-center text-lg">
-          {navLinks.map((link, i) => (
-            <li
-              key={i}
-              className="capitalize border px-4 py-2 border-transparent hover:border-white/15 transition-all ease-in-out rounded hover:bg-white/10"
-            >
-              <Link href={`/${link}`}>{link}</Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div className="hidden lg:block fixed top-4 left-1/2 -translate-x-1/2 z-[1000]">
+        <nav className="w-full border border-white/15 shadow-2xl py-1.5 px-2 backdrop-blur-lg rounded bg-white/5">
+          <ul className="flex items-center text-lg">
+            {navLinks.map((link, i) => (
+              <li
+                key={i}
+                className="capitalize border px-4 py-2 border-transparent hover:border-white/15 transition-all ease-in-out rounded hover:bg-white/10"
+              >
+                <Link href={`/${link}`}>{link}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
 
       {/* Action and Mobile Menu Toggle */}
       <div className="flex items-center gap-4">
