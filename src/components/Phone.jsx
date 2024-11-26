@@ -16,10 +16,7 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { PiCoffee, PiChartLineUpLight } from "react-icons/pi";
 const Phone = () => {
   return (
-    <div
-      className="max-w-xs min-w-[400px] h-[80vh] bg-cover bg-center flex flex-col items-center my-8 md:my-72 bg-black border-2 border-gray-500/90  rounded-[4em] pt-2 shadow-sm shadow-white/70 pb-2 -z-10 relative overflow-hidden md:hidden"
-      //   style={{ backgroundImage: `url(${phoneBg})` }}
-    >
+    <div className="max-w-xs min-w-[400px] h-[80vh] bg-cover bg-center flex flex-col items-center my-8 md:my-72 bg-black border-2 border-gray-500/90  rounded-[4em] pt-2 shadow-sm shadow-white/70 pb-2 -z-10 relative overflow-hidden md:hidden">
       <div className="screen absolute inset-0"></div>
       <div className="flex gap-1 flex-row-reverse">
         <div className="w-12 h-2 rounded-full bg-white/10"></div>
