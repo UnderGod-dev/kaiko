@@ -1,5 +1,3 @@
-import CardBody from "./cardBody";
-
 const SecondCard = ({ numbers, title, content }) => {
   return (
     <div className="bg-black">
