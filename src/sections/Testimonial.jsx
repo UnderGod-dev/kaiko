@@ -31,7 +31,7 @@ const Testimonial = () => {
       comment:
         "Managing contracts was a headache until I found Kaiko. Now, I can organize, track deadlines, and receive reminders seamlessly. It's simplified my workload.",
       avater: pic3,
-      name: "Habeeb Neyoh",
+      name: "Nicole Adam",
       position: "CTO",
     },
   ];
