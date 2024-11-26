@@ -1,11 +1,4 @@
 import { CiCircleInfo } from "react-icons/ci";
-import Image from "next/image";
-import phoneBg from "../app/assets/phonebg.png";
-// import { RiArrowDownSLine } from "react-icons/ri";
-import PhoneFrame from "./PhoneFrame";
-import CardBody from "./cardBody";
-// import { CiCircleInfo } from "react-icons/ci";
-import { BsArrowLeft } from "react-icons/bs";
 import {
   IoFastFoodOutline,
   IoAirplaneOutline,
@@ -13,7 +6,7 @@ import {
   IoPersonOutline,
 } from "react-icons/io5";
 import { GiClothes } from "react-icons/gi";
-import { RiArrowDownSLine, RiCalendarScheduleLine } from "react-icons/ri";
+import { RiArrowDownSLine } from "react-icons/ri";
 import { BsArrowRightShort } from "react-icons/bs";
 import { PiCoffee, PiChartLineUpLight } from "react-icons/pi";
 export const ScreenOne = () => {
