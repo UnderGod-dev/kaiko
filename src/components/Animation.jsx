@@ -621,12 +621,12 @@ const Animation = () => {
       className="min-h-screen w-screen relative pb-[26em]"
     >
       {/* Main Content */}
-      <div className="relative mx-auto">
+      <div className="relative mx-auto w-full flex flex-col items-center">
         {/* Phone Container */}
         <div
           ref={phoneRef}
           id="phone"
-          className="min-h-screen flex flex-col justify-center items-center"
+          className="min-h-screen flex flex-col justify-center items-center  min-w-full"
         >
           <div className="space-y-10 absolute w-full z-10 text-sm text-white/75 font-semibold max-w-screen-lg left-1/2 -translate-x-1/2 bg-violet-400f top-0">
             <div className="flex justify-between px-12">
@@ -670,7 +670,7 @@ const Animation = () => {
               </div>
             </div>
           </div>
-          <div className="h-[80vh] w-[38%] border-2 border-white/20 rounded-[4em] pt-1 !pb-4 overflow-hidden relative flex flex-col bg-black z-[0] mx-auto">
+          <div className="h-[80vh] w-[30%] 2xl:w-[22%] border-2 border-white/20 rounded-[4em] pt-1 !pb-4 overflow-hidden relative flex flex-col bg-black mx-auto">
             <div className="bg-whitei flex justify-center">
               <NotificationBar />
             </div>
@@ -699,7 +699,7 @@ const Animation = () => {
                   src={"/screen3.svg"}
                   alt="screen"
                   height={700}
-                  width={500}
+                  width={700}
                   className="object-center object-contain size-full h-full"
                 />
               </div>
@@ -769,17 +769,6 @@ Management
           </div>
         </div>
       </div>
-      {/* <div className="relative">
-        <div className="screen absolute inset-0 bg-red-700">
-          <Image
-            src={"/screen1.svg"}
-            alt="screen"
-            height={400}
-            width={400}
-            className="object-center object-contain size-auto"
-          />
-        </div>
-      </div> */}
     </div>
   );
 };
