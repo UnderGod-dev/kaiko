@@ -10,10 +10,10 @@ const Footer = () => {
     <div className="mx-4 pb-10 mt-16">
       <div className="relative max-w-[300px] md:max-w-screen-sm mx-auto ">
         <Image
-          src={"/phone.webp"}
+          src={"/footerImg.svg"}
           alt="dash"
-          height={200}
-          width={200}
+          height={300}
+          width={300}
           className="object-center size-full rounded-br-3xl md:rounded-b-none"
         />
       </div>

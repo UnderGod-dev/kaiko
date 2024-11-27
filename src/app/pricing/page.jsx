@@ -4,6 +4,7 @@ import DesktopPlans from "@/components/DesktopPlans";
 import MobilePlans from "@/components/MobilePlans";
 import TextHover from "@/components/TextHover";
 import Features from "@/sections/Features";
+import Image from "next/image";
 import { useState } from "react";
 import { BsCheck } from "react-icons/bs";
 
@@ -199,6 +200,33 @@ const Pricing = () => {
       </div>
       <div className="hidden md:block">
         <DesktopPlans />
+      </div>
+      <div
+        className=""
+        // style={{
+        //   backgroundImage: `url('/frame.svg')`,
+        //   backgroundRepeat: "no-repeat",
+        //   objectFit: "contain",
+        //   objectPosition: "center",
+        // }}
+      >
+        <div className="relative size-full inset-0">
+          <Image
+            src={`/frame.svg`}
+            alt="screen"
+            height={400}
+            width={400}
+            className={`object-center object-contain  h-[520px] bg-red-400y`}
+          />
+
+          <Image
+            src={`/screen1.svg`}
+            alt="screen"
+            height={400}
+            width={400}
+            className={`object-center object-contain  h-[510px] bg-red-400g absolute bottom-2`}
+          />
+        </div>
       </div>
     </main>
   );

@@ -3,31 +3,11 @@ import React, { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import {
-  BsArrowLeft,
-  BsArrowRightShort,
-  BsBag,
-  BsCarFront,
-  BsHouse,
-  BsPlus,
-  BsTwitterX,
-} from "react-icons/bs";
-import { CiCircleInfo, CiCoffeeCup } from "react-icons/ci";
+import { BsBag } from "react-icons/bs";
+import { CiCoffeeCup } from "react-icons/ci";
 import { MdFlightTakeoff } from "react-icons/md";
-import { GiClothes, GiPowerLightning, GiTrade } from "react-icons/gi";
-import { NotificationBar } from "@/components/DesktopPhone";
+import { GiTrade } from "react-icons/gi";
 import Card from "@/components/Card";
-import PhoneAnalytics from "@/components/PhoneAnalytics";
-import PhoneContracts from "@/components/PhoneContracts";
-import { PiChartLineUpLight, PiCoffee } from "react-icons/pi";
-import {
-  IoAirplaneOutline,
-  IoFastFoodOutline,
-  IoHomeOutline,
-  IoPersonOutline,
-} from "react-icons/io5";
-import { RiArrowDownSLine, RiNetflixFill } from "react-icons/ri";
-import { FaArrowLeft, FaDumbbell, FaHospital, FaYoutube } from "react-icons/fa";
 import Image from "next/image";
 
 if (typeof window !== "undefined") {
@@ -35,12 +15,45 @@ if (typeof window !== "undefined") {
 }
 
 const img = ["screen1", "screen2", "screen3"];
+const cards = [
+  {
+    title: "dashboard",
+    heading: "Financial Overview",
+    paragraph:
+      "Access all your financial data at a glance, streamlining your management process and enhancing your financial decision-making.",
+    l1: "Real-time balance updates",
+    l2: "Transaction categorization",
+    l3: "Budget tracking",
+  },
+  {
+    title: "Analytics",
+    heading: "Financial Insights",
+    paragraph:
+      "Gain comprehensive insights into your spending patterns and financial behaviors with detailed analytics, empowering informed financial choices.",
+    l1: "Expense breakdown charts",
+    l2: "Income trends analysis",
+    l3: "Savings growth tracking",
+  },
+  {
+    title: "Contracts",
+    heading: "Contract Management",
+    paragraph:
+      "Keep track of all your contracts in one place, ensuring clarity and compliance with automated reminders and easy access.",
+    l1: "Contract expiration alerts",
+    l2: "Document storage",
+    l3: "Renewal notifications",
+  },
+];
 
 const Animation = () => {
   const containerRef = useRef(null);
   const phoneRef = useRef(null);
+  const screensRef = useRef([]);
 
   useGSAP(() => {
+    // Ensure we have refs for all screens
+    screensRef.current = screensRef.current.slice(0, img.length);
+
     // Pin the phone
     ScrollTrigger.create({
       trigger: phoneRef.current,
@@ -52,38 +65,34 @@ const Animation = () => {
       markers: false,
     });
 
-    // Animate screens based on scroll position
-    const screens = gsap.utils.toArray(".screen");
+    // Prepare initial screen positions
+    gsap.set(screensRef.current[0], { x: "0%" });
+    gsap.set(screensRef.current[1], { x: "100%" });
+    gsap.set(screensRef.current[2], { x: "-100%" });
+
+    // Create scroll-based screen transitions
     const cards = gsap.utils.toArray(".card");
 
-    // Set initial positions for screens
-    gsap.set(screens[0], { x: "0%" });
-    gsap.set(screens[1], { x: "100%" });
-    gsap.set(screens[2], { x: "-100%" }); // Third screen starts from left
-
-    // Create animations for each card-screen pair
     cards.forEach((card, index) => {
-      if (index === 0) return; // Skip first screen as it's visible by default
+      if (index === 0) return; // Skip first card/screen
 
       ScrollTrigger.create({
         trigger: card,
         start: "top 70%",
         end: "bottom 40%",
         markers: false,
-        delay: 1,
-        scrub: 1, // Smooth animation tied to scroll
+        scrub: 1, // Smooth scroll-linked animation
         onUpdate: (self) => {
-          // Calculate progress (0 to 1)
           const progress = self.progress;
 
           if (index === 1) {
-            // Second screen comes from right
-            gsap.set(screens[1], { x: `${100 - progress * 100}%` });
-            gsap.set(screens[0], { x: `${-progress * 100}%` });
+            // Transition from first to second screen
+            gsap.set(screensRef.current[1], { x: `${100 - progress * 100}%` });
+            gsap.set(screensRef.current[0], { x: `${-progress * 100}%` });
           } else if (index === 2) {
-            // Third screen comes from left
-            gsap.set(screens[2], { x: `${-100 + progress * 100}%` });
-            gsap.set(screens[1], { x: `${progress * 100}%` });
+            // Transition from second to third screen
+            gsap.set(screensRef.current[2], { x: `${-100 + progress * 100}%` });
+            gsap.set(screensRef.current[1], { x: `${progress * 100}%` });
           }
         },
       });
@@ -93,17 +102,18 @@ const Animation = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen w-screen relative pb-[26em]"
+      className="min-h-screen w-screen relative pb-[26em] bg-violegt-500"
     >
       {/* Main Content */}
-      <div className="relative mx-auto w-full flex flex-col items-center">
+      <div className="relative mx-auto flex flex-col">
         {/* Phone Container */}
         <div
           ref={phoneRef}
           id="phone"
-          className="min-h-screen flex flex-col justify-center items-center  min-w-full"
+          className="min-h-screen flex flex-col justify-center items-center w-screen"
         >
-          <div className="space-y-10 absolute w-full z-10 text-sm text-white/75 font-semibold max-w-screen-lg left-1/2 -translate-x-1/2 bg-violet-400f top-20">
+          {/* floating babe */}
+          <div className="space-y-10 absolute w-full z-10 text-sm text-white/75 font-semibold max-w-screen-lg left-1/2 -translate-x-1/2 top-10">
             <div className="flex justify-between px-12">
               <div
                 className="border border-white/15 w-fit flex items-center p-2 rounded gap-2 animate-move-top delay-300"
@@ -145,94 +155,64 @@ const Animation = () => {
               </div>
             </div>
           </div>
-          <div
-            className="h-[68vh] max-w-[320px] w-full 2xl:w-[22%] border-2 border-white/20 rounded-[4em] pt-1 !pb-4 overflow-hidden relative flex flex-col bg-greent mx-auto"
-            style={{ aspectRatio: "300/700" }}
-          >
-            <div className="absolute size-full inset-x-0 border-x-8 border-black z-10 rounded-3xl"></div>
-            <div className="bg-whitei flex justify-center">
-              <NotificationBar />
-            </div>
-            <div className="overflow-x-visibleb bg-yellow-600">
-              {/* Screens */}
+          <div className="relative size-full flex justify-center items-center">
+            <Image
+              src={`/frame.svg`}
+              alt="screen frame"
+              height={400}
+              width={300}
+              className={`absolute z- object-center object-contain h-[720px] w-full`}
+            />
+            {/* Screens Container */}
+            <div
+              className="absolute 
+               left-1/2 -translate-x-1/2 
+               top-1/2 -translate-y-1/2 
+               w-[338px]  // Slightly narrower than frame
+               2xl:w-[338px] h-[700px] 
+               overflow-hidden rounded-[40px] bg-gradient-to-b from-[#111] to-[#1b1b1b]"
+            >
               {img.map((image, i) => (
-                <div className="screen absolute h-full bg-white/5">
-                  <Image
-                    src={`/${image}.svg`}
-                    alt="screen"
-                    height={700}
-                    width={400}
-                    className={`object-center object-fill max-w-[320px] h-full bg-red-400t ${
-                      i == 0 ? "-ml-16" : i == 1 ? "-ml-52" : "-ml-16"
-                    }`}
-                  />
-                </div>
+                <Image
+                  key={image}
+                  ref={(el) => (screensRef.current[i] = el)}
+                  src={`/${image}.svg`}
+                  alt={`screen ${i + 1}`}
+                  height={400}
+                  width={400}
+                  className={`
+          absolute 
+          object-center object-cover 
+          w-full h-full
+        `}
+                />
               ))}
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Cards Section - Increased z-index and added background */}
-        <div className="relative z-10 w-[100vw] lg:w-[80vw] mx-auto max-w-screen-lg">
-          <div className="card card-1 h-screen flex items-center p-4">
-            <div className="">
+      {/* Cards Section */}
+      <div className="relative z-10 w-[100vw] lg:w-[80vw] mx-auto max-w-screen-lg">
+        {cards.map((card, i) => (
+          <div
+            key={card.title}
+            className={`card card-${i + 1} h-screen flex items-center ${
+              i === 1 ? "justify-end" : ""
+            } p-4`}
+          >
+            <div>
               <Card
-                title="dashboard"
-                heading="Financial 
-Overview"
-                paragraph="Access all your financial data at a glance, streamlining your management process and enhancing your financial decision-making."
-                l1="Real-time balance updates"
-                l2="Transaction categorization"
-                l3="Budget tracking"
+                title={card.title}
+                heading={card.heading}
+                paragraph={card.paragraph}
+                l1={card.l1}
+                l2={card.l2}
+                l3={card.l3}
               />
             </div>
           </div>
-          <div className="card card-2 h-screen flex items-center justify-end p-4">
-            <Card
-              title="Analytics"
-              heading="Financial
-Insights 
-"
-              paragraph="Gain comprehensive insights into your spending patterns and financial behaviors with detailed analytics, empowering informed financial choices."
-              l1="Expense breakdown charts
-
-"
-              l2="Income trends analysis
-
-"
-              l3="Savings growth tracking
-
-"
-            />
-          </div>
-          <div className="card card-3 h-screen flex items-center p-4 ">
-            <Card
-              title="Contracts
-
-"
-              heading="Contract 
-Management
- 
-"
-              paragraph="Keep track of all your contracts in one place, ensuring clarity and compliance with automated reminders and easy access."
-              l1="Contract expiration alerts
-
-
-
-"
-              l2="Document storage
-
-
-
-"
-              l3="Renewal notifications
-
-
-
-"
-            />
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
