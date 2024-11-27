@@ -30,15 +30,15 @@ const Hero = () => {
         </p>
         <div className="flex items-center justify-center gap-2 md:gap-4">
           <TextHover
-            className="bg-teal-400 p-2 lg:p-3 lg:px-10 rounded-lg text-black/60 font-semibold"
+            className="bg-teal-400 p-3 lg:px-10 rounded-lg text-black/60 font-semibold"
             content="Download"
           />
           <TextHover
-            className="btn-light bg-black rounded-lg text-white p-2 outline-none md:hidden"
+            className="bg-black border border-white/15 rounded-lg btn-light outline-none md:hidden"
             content="Features"
           />
           <TextHover
-            className="bg-black border border-white/15 rounded-lg btn-light outline-none hidden md:block"
+            className="bg-black border border-white/15 p-1 rounded-lg btn-light outline-none hidden md:block"
             content="Explore Features"
           />
         </div>
@@ -115,7 +115,7 @@ Management
         <h3 className="  text-white/75 text-center text-lg font-medium">
           The Preferred Choice for top instituitions
         </h3>
-        <div className="flex items-center justify-center mx-8 [mask-image:linear-gradient(to_right,transparent,white_10%,black_90%,transparent)]">
+        <div className="flex items-center justify-center mx-8 [mask-image:linear-gradient(to_right,transparent,white_10%,black_90%,transparent)] !overflow-x-hidden">
           <Logo />
         </div>
       </div>
