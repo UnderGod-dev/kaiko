@@ -112,8 +112,7 @@ const Animation = () => {
           id="phone"
           className="min-h-screen flex flex-col justify-center items-center w-screen"
         >
-          {/* floating babe */}
-          <div className="space-y-10 absolute w-full z-10 text-sm text-white/75 font-semibold max-w-screen-lg left-1/2 -translate-x-1/2 top-10">
+          <div className="space-y-10 absolute w-full z-10 text-sm text-white/75 font-semibold max-w-screen-lg left-1/2 -translate-x-1/2 top-20">
             <div className="flex justify-between px-12">
               <div
                 className="border border-white/15 w-fit flex items-center p-2 rounded gap-2 animate-move-top delay-300"
@@ -160,17 +159,17 @@ const Animation = () => {
               src={`/frame.svg`}
               alt="screen frame"
               height={400}
-              width={300}
-              className={`absolute z- object-center object-contain h-[720px] w-full`}
+              width={400}
+              className={`absolute z-1 object-center object-contain h-[520px] 2xl:h-[720px]`}
             />
             {/* Screens Container */}
             <div
               className="absolute 
                left-1/2 -translate-x-1/2 
                top-1/2 -translate-y-1/2 
-               w-[338px]  // Slightly narrower than frame
-               2xl:w-[338px] h-[700px] 
-               overflow-hidden rounded-[40px] bg-gradient-to-b from-[#111] to-[#1b1b1b]"
+               w-[238px] h-[510px]  // Slightly narrower than frame
+               2xl:w-[338px] 2xl:h-[700px] 
+               overflow-hidden rounded-3xl 2xl:rounded-[40px] bg-gradient-to-b from-[#111] to-[#1b1b1b]"
             >
               {img.map((image, i) => (
                 <Image
