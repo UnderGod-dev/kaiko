@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${inter.variable}  antialiased overflow-x-hidden relative`}
+        className={`${poppins.variable} ${inter.variable}  antialiased !overflow-x-hidden relative`}
       >
         <Navbar />
         {/* <AnimationProvider> */}

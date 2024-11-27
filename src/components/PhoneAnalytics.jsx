@@ -5,7 +5,7 @@ import { BsArrowLeft } from "react-icons/bs";
 
 const PhoneAnalytics = () => {
   return (
-    <PhoneFrame w={500} h={100}>
+    <PhoneFrame w={500} h={200}>
       <div className="text-center flex flex-col justify-between gap-2 w-full ">
         <div className="flex justify-between">
           <span className="border-2 rounded  border-white/15 p-1">

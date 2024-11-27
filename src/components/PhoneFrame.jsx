@@ -5,7 +5,7 @@ import { RiArrowDownSLine } from "react-icons/ri";
 const PhoneFrame = ({ h, w, children }) => {
   return (
     <div
-      className={`w-[300px] max-h-[60vh] h-full bg-cover bg-center flex flex-col items-center my-8 md:my-72 bg-black/90 border-2 border-gray-500/90  rounded-[4em] pt-2 shadow-sm shadow-white/70 pb-2 -z-10 relative mx-auto overflow-y-clip`}
+      className={`w-[300px] max-h-[85vh] h-full bg-cover bg-center flex flex-col items-center my-8 md:my-72 bg-black/90 border-2 border-gray-500/90  rounded-[4em] pt-2 shadow-sm shadow-white/70 pb-2 -z-10 relative mx-auto overflow-y-clip`}
     >
       <div className="flex gap-1 flex-row-reverse">
         <div className="w-12 h-2 rounded-full bg-white/10">{}</div>

@@ -593,7 +593,7 @@ const Test = () => {
         trigger: card,
         start: "top 70%",
         end: "bottom 40%",
-        markers: true,
+        markers: false,
         delay: 1,
         scrub: 1, // Smooth animation tied to scroll
         onUpdate: (self) => {

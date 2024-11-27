@@ -2,26 +2,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsInstagram, BsLinkedin, BsTwitter } from "react-icons/bs";
 import { FaAppStore } from "react-icons/fa";
+import { GiWaves } from "react-icons/gi";
 import { IoLogoGooglePlaystore } from "react-icons/io5";
 
 const Footer = () => {
   return (
     <div className="mx-4 pb-10 mt-16">
-      <div className="relative max-w-xs md:max-w-screen-sm mx-auto ">
+      <div className="relative max-w-[300px] md:max-w-screen-sm mx-auto ">
         <Image
           src={"/phone.webp"}
           alt="dash"
           height={200}
           width={200}
-          className="object-center size-full"
+          className="object-center size-full rounded-br-3xl md:rounded-b-none"
         />
       </div>
-      <div className="bg-black mx-4 lg:mx-20 rounded-3xl">
+      <div className="bg-black mx-2 lg:mx-20 rounded-3xl">
         <footer className="rounded-3xl p-4 flex flex-col border-2 border-white/15 text-center gap-4 items-center bg-white/10 space-y-8">
           <nav className="flex flex-col items-center md:flex-row  md:justify-between gap-4 w-full">
             <div className="space-y-2">
               <div className="flex items-center gap-4 justify-center">
-                <div className="size-14 bg-teal-400 rounded-lg"></div>
+                <div className="size-14 bg-teal-400 rounded-lg text-5xl text-black flex justify-center items-center">
+                  <GiWaves />
+                </div>
                 <Link href={"/"} className="font-bold text-xl">
                   KAIKO
                 </Link>
@@ -46,10 +49,18 @@ const Footer = () => {
               </p>
             </div>
             <div className="flex gap-2 text-4xl">
-              <BsTwitter className="border-2 p-1.5 rounded border-white/15" />
-              <BsInstagram className="border-2 p-1.5 rounded border-white/15" />
-              <BsLinkedin className="border-2 p-1.5 rounded border-white/15" />
-              <BsGithub className="border-2 p-1.5 rounded border-white/15" />
+              <Link href={"https://x.com/talk2hardeq"}>
+                <BsTwitter className="border-2 p-1.5 rounded border-white/15" />
+              </Link>
+              <Link href={"https://instagram.com/talk2hardeq"}>
+                <BsInstagram className="border-2 p-1.5 rounded border-white/15" />
+              </Link>
+              <Link href={"/"}>
+                <BsLinkedin className="border-2 p-1.5 rounded border-white/15" />
+              </Link>
+              <Link href={"https://github.com/UnderGod-dev"}>
+                <BsGithub className="border-2 p-1.5 rounded border-white/15" />
+              </Link>
             </div>
           </nav>
           <div className="p-4 w-full">
@@ -81,7 +92,7 @@ const Footer = () => {
                     <Link href={"/"}>Blog</Link>
                   </li>
                   <li className="hover:text-white transition-colors ease-linear">
-                    <Link href={"/"}>Pricing</Link>
+                    <Link href={"/pricing"}>Pricing</Link>
                   </li>
                   <li className="hover:text-white transition-colors ease-linear">
                     <Link href={"/"}>Changelog</Link>
@@ -94,15 +105,17 @@ const Footer = () => {
             <h3 className="text-white/75 font-semibold">DOWNLOAD</h3>
             <div className="space-y-2 lg:space-y-0 lg:flex gap-4">
               <div className="bg-white/15 border-2 border-white/15 rounded p-2 flex items-center gap-2">
-                <FaAppStore className="text-3xl" />{" "}
+                <FaAppStore className="text-2xl" />{" "}
                 <span className="text-xs">
-                  GET IT ON <br /> <b className="text-lg">AppStore</b>
+                  GET IT ON <br />{" "}
+                  <b className="text-base lg:text-lg">AppStore</b>
                 </span>
               </div>
               <div className="bg-white/15 border-2 border-white/15 rounded p-2 flex items-center gap-2 h-full">
-                <IoLogoGooglePlaystore className="text-3xl" />{" "}
+                <IoLogoGooglePlaystore className="text-2xl" />{" "}
                 <span className="text-xs">
-                  GET IT ON <br /> <b className="text-lg">PlayfStore</b>
+                  GET IT ON <br />{" "}
+                  <b className="text-base lg:text-lg">PlayStore</b>
                 </span>
               </div>
             </div>

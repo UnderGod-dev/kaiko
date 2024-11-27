@@ -89,17 +89,17 @@ const Testimonial = () => {
           ))}
         </div>
       </div>
-      <div className="flex flex-col justify-center mx-auto gap-4">
-        <div className="flex justify-center">
+      <div className="flex flex-col justify-center mx-auto gap-4 ">
+        <div className="flex justify-center -mt-20">
           <Image
             src={"/trustpilot.svg"}
             height={280}
             width={280}
-            className=" object-center"
+            className="object-center size-[200px] lg:size-[280px]"
           />
         </div>
 
-        <div className="flex justify-center mt-4">
+        <div className="flex justify-center -mt-10">
           <Image
             src={"/stars-5.svg"}
             height={150}

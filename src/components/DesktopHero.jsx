@@ -573,7 +573,7 @@ const DesktopHero = () => {
       end: "bottom center",
       pin: true,
       pinSpacing: false,
-      markers: true,
+      markers: false,
     });
 
     // Animate screens based on scroll position
@@ -593,7 +593,7 @@ const DesktopHero = () => {
         trigger: card,
         start: "top 70%",
         end: "bottom 40%",
-        markers: true,
+        markers: false,
         delay: 1,
         scrub: 1, // Smooth animation tied to scroll
         onUpdate: (self) => {

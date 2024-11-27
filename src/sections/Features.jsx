@@ -5,13 +5,11 @@ import { PiTelevision } from "react-icons/pi";
 
 const Features = () => {
   const logoSrc = [
-    "pngegg.png",
     "pngegg (1).png",
     "pngegg (2).png",
     "pngegg (3).png",
     "pngegg (4).png",
     "pngegg (5).png",
-    "pngegg (6).png",
     "pngegg (7).png",
     "pngegg (8).png",
     "pngegg (9).png",
@@ -31,9 +29,11 @@ const Features = () => {
       <div className="space-y-4 md:space-y-8">
         <div className="flex flex-col md:flex-row gap-4 md:gap-8">
           <div className="bg-black">
-            <div className="card-border border-2 border-white/15 bg-white/10 p-8 space-y-4 flex flex-col items-center justify-center pb-0">
+            <div className="card-border border-2 border-white/15 bg-white/10 p-8 px-4 lg:px-8 space-y-4 flex flex-col items-center justify-center pb-0">
               <h3 className="uppercase text-green font-semibold">Dashboard</h3>
-              <p className="text-4xl font-semibold">Financial Control</p>
+              <p className="text-3xl lg:text-4xl font-[550]">
+                Financial Control
+              </p>
               <p className="text-white/75">
                 Take charge of your finances with a comprehensive dashboard,
                 providing instant insights
@@ -54,9 +54,11 @@ const Features = () => {
           </div>
 
           <div className="bg-black">
-            <div className="card-border border-2 border-white/15 bg-white/10 p-8 space-y-4 flex flex-col items-center justify-center pb-0">
+            <div className="card-border border-2 border-white/15 bg-white/10 p-8 px-4 lg:px-8 space-y-4 flex flex-col items-center justify-center pb-0">
               <h3 className="uppercase text-green font-semibold">Analytics</h3>
-              <p className="text-4xl font-semibold">Financial Patterns</p>
+              <p className="text-3xl lg:text-4xl font-[550]">
+                Financial Patterns
+              </p>
               <p className="text-white/75">
                 Unravel insights into your financial behavior with detailed
                 analytics, smarter decisions.
@@ -79,16 +81,16 @@ const Features = () => {
         <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {/* Bank Section */}
           <div className="bg-black">
-            <div className="card-border border-2 border-white/15 bg-white/10 p-8 space-y-4 flex flex-col justify-center items-center">
+            <div className="card-border border-2 border-white/15 bg-white/10 p-8 px-4 lg:px-8 space-y-4 flex flex-col justify-center items-center">
               <h3 className="text-green font-semibold uppercase">Banks</h3>
-              <h4 className="text-3xl font-semibold capitalize">
+              <h4 className="text-3xl lg:text-4xl font-[550]">
                 Bank Account Integration
               </h4>
               <p className="text-white/75">
                 Link 30+ banks seamlessly for comprehensive financial
                 management.
               </p>
-              <div className="grid gap-2 grid-cols-3">
+              <div className="grid gap-2 grid-cols-2 md:grid-cols-3">
                 {logoSrc.map((logo, id) => (
                   <div
                     className={`h-20 min-w-[100px] flex place-content-center card-border bg-green/60 hover:bg-transparent border-2 shadow-inner shadow-white/75 border-white/75 ${
@@ -110,9 +112,11 @@ const Features = () => {
 
           {/* Contracts Section */}
           <div className="bg-black">
-            <div className="card-border border-2 border-white/15 bg-white/10 p-8 space-y-4 flex flex-col md:basis-1/2 lg:basis-[30%] h-full">
-              <h3 className="text-green font-semibold uppercase">Contracts</h3>
-              <h4 className="text-3xl font-semibold capitalize">
+            <div className="card-border border-2 border-white/15 bg-white/10 p-8 px-4 lg:px-8 space-y-4 flex flex-col md:basis-1/2 lg:basis-[30%] h-full">
+              <h3 className="text-green font-semibold uppercase text-center">
+                Contracts
+              </h3>
+              <h4 className="text-3xl lg:text-4xl font-[550]">
                 Contract Handling
               </h4>
               <p className="text-white/75">
@@ -169,7 +173,7 @@ const Features = () => {
 
           {/* Overview Section */}
           <div className="bg-black">
-            <div className="card-border border-2 border-white/15 bg-white/10 p-8 space-y-4 flex flex-col md:basis-1/2 lg:basis-[30%] h-full">
+            <div className="card-border border-2 border-white/15 bg-white/10 p-8 px-4 lg:px-8 space-y-4 flex flex-col md:basis-1/2 lg:basis-[30%] h-full">
               <h3 className="text-green font-semibold uppercase">Overview</h3>
               <h4 className="text-3xl font-semibold capitalize">
                 Instant Transaction

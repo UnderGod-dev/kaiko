@@ -26,7 +26,7 @@ import { CiCircleInfo } from "react-icons/ci";
 const PhoneContracts = () => {
   return (
     <PhoneFrame>
-      <div className="space-y-4 text-xs w-full pt-14">
+      <div className="space-y-4 text-xs w-full pt-1">
         <div className="flex justify-between">
           <span className="border-2 rounded  border-white/15 p-1">
             <FaArrowLeft className="font-bold" />
@@ -42,16 +42,7 @@ const PhoneContracts = () => {
             <span className="text-white/75 ">Monthly Expenses</span>
             <span className="font-bold text-lg">$2.421,50</span>
           </div>
-          <div className="flex justify-between">
-            <h2 className="text-center text-md font-bold">Contracts</h2>
-            <h2 className="text-center text-md font-bold inline-flex items-center gap-1">
-              Add Contracts
-              <span className="border-2 rounded  border-white/15">
-                <BsPlus className="font-bold" />
-              </span>
-            </h2>
-          </div>
-          <div className="flex justify-between items-center border-2 border-white/25 p-2 rounded bg-white/10 ">
+          {/* <div className="flex justify-between items-center border-2 border-white/25 p-2 rounded bg-white/10 ">
             <div className="flex justify-between items-center gap-2">
               <div className="text-xl bg-white/15 border border-white/25 p-1 rounded">
                 <RiNetflixFill />
@@ -64,7 +55,7 @@ const PhoneContracts = () => {
               </div>
             </div>
             <span className="font-semibold">-$ 9.99</span>
-          </div>
+          </div> */}
           <div className="flex justify-between items-center border-2 border-white/25 p-2 rounded bg-white/10">
             <div className="flex justify-between items-center gap-2">
               <div className="text-xl bg-white/15 border border-white/25 p-1 rounded">

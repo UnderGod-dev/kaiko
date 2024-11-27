@@ -19,21 +19,21 @@ const Accordion = ({ faqData }) => {
     >
       <div className="mx-auto w-full mb-10  text-center space-y-4">
         <h4 className="text-green">FAQ</h4>
-        <h2 className="text-6xl font-[550]">
+        <h2 className="text-4xl lg:text-6xl font-[550]">
           Your Questions <br /> Answered
         </h2>
       </div>
       <div className="space-y-4">
         {faqData.map((faq, index) => (
           <div className="bg-black" key={index}>
-            <div className="border px-4 py-2 rounded border-white/15 bg-white/10 border-gray-200">
+            <div className="border p-4 rounded border-white/15 bg-white/10 border-gray-200">
               {/* Accordion Header */}
               <button
                 onClick={() => toggleAccordion(index)}
-                className="w-full text-left flex justify-between items-center py-4 font-semibold text-lg text-white/80"
+                className="w-full text-left flex justify-between items-center py-4 font-[550] text-base lg:text-lg text-white/80"
               >
                 {faq.question}
-                <span className="bg-green p-1 rounded text-black">
+                <span className="bg-green p-1 rounded text-black ml-8">
                   <PiPlusBold
                     className={`transition-transform transform duration-300  ${
                       activeIndex === index ? "rotate-45" : ""
@@ -44,7 +44,7 @@ const Accordion = ({ faqData }) => {
 
               {/* Accordion Content */}
               <div
-                className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+                className={`overflow-hidden transition-all duration-500  ease-in-out ${
                   activeIndex === index ? "max-h-96" : "max-h-0"
                 }`}
               >

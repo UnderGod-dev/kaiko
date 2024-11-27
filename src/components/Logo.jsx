@@ -57,7 +57,7 @@ const Logo = () => {
   }, []);
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="overflow-hidden max-w-[300px] md:max-w-none md:w-full">
       <div ref={containerRef} className="inline-flex gap-8 items-center">
         <div
           ref={firstRowRef}

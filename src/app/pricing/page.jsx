@@ -93,7 +93,7 @@ const Pricing = () => {
                     className="flex items-center gap-4 border rounded text-lg border-white/15 p-2 bg-white/10"
                     key={index}
                   >
-                    <span className="border rounded text-2xl border-white/15">
+                    <span className="border rounded text-base lg:text-2xl border-white/15">
                       <BsCheck />
                     </span>{" "}
                     {feature}
@@ -197,7 +197,7 @@ const Pricing = () => {
         <MobilePlans plan="pro" />
         <MobilePlans plan="premium" />
       </div>
-      <div className="sm:hidden md:block">
+      <div className="hidden md:block">
         <DesktopPlans />
       </div>
     </main>
