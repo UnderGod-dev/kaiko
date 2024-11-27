@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        green: "#51d6be",
+        green: "#55D6BE",
       },
       animation: {
         "move-left": "move-left 20s linear infinite",
