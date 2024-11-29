@@ -93,7 +93,7 @@ const Navbar = () => {
 
         {/* Action and Mobile Menu Toggle */}
         <div className="flex items-center gap-4">
-          <button className="bg-teal-400 p-2 rounded-lg text-black/60 font-semibold">
+          <button className="bg-teal-400 p-2 rounded-lg text-black/60 font-semibold hidden lg:block">
             Download
           </button>
 
