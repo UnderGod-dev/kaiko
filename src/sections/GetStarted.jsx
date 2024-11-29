@@ -16,7 +16,7 @@ const GetStarted = () => {
     gsap.from(headerRef.current.children, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -38,7 +38,9 @@ const GetStarted = () => {
         Take control of your finances effortlessly with Kaiko. Sign up now for a
         seamless financial management experience.
       </p>
-      <Download />
+      <div className="w-2/4">
+        <Download />
+      </div>
     </section>
   );
 };

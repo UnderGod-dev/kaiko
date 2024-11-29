@@ -54,7 +54,7 @@ const Hero = () => {
     gsap.from(headerRef.current.children, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -67,7 +67,7 @@ const Hero = () => {
     gsap.from(updateRef.current.children, {
       scrollTrigger: {
         trigger: updateRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -80,7 +80,7 @@ const Hero = () => {
       gsap.from(phone, {
         scrollTrigger: {
           trigger: phone,
-          start: "top 80%",
+          start: "top bottom",
         },
         y: 100,
         opacity: 0,
@@ -94,7 +94,7 @@ const Hero = () => {
       gsap.from(phoneCard, {
         scrollTrigger: {
           trigger: phoneCard,
-          start: "top 80%",
+          start: "top bottom",
         },
         y: 100,
         opacity: 0,
@@ -108,7 +108,7 @@ const Hero = () => {
       gsap.from(card, {
         scrollTrigger: {
           trigger: card,
-          start: "top 80%",
+          start: "top bottom",
         },
         y: 100,
         opacity: 0,

@@ -5,7 +5,7 @@ const Download = () => {
   return (
     <div className="space-y-2 md:space-y-0 md:flex gap-4">
       <div className="bg-muted">
-        <div className="bg-mutedELight border-2 border-white/15 rounded p-2 flex items-center gap-2">
+        <div className="bg-mutedELight border-2 border-white/15 rounded p-2 flex items-center gap-2 justify-center">
           <FaAppStore className="text-2xl" />{" "}
           <span className="text-xs">
             GET IT ON <br /> <b className="text-base lg:text-lg">AppStore</b>
@@ -13,7 +13,7 @@ const Download = () => {
         </div>
       </div>
       <div className="bg-muted">
-        <div className="bg-mutedELight border-2 border-white/15 rounded p-2 flex items-center gap-2 h-full">
+        <div className="bg-mutedELight border-2 border-white/15 rounded p-2 flex items-center gap-2 h-full justify-center">
           <IoLogoGooglePlaystore className="text-2xl" />{" "}
           <span className="text-xs">
             GET IT ON <br /> <b className="text-base lg:text-lg">PlayStore</b>

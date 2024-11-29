@@ -24,7 +24,7 @@ const Pricing = () => {
     gsap.from(headerRef.current.children, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -36,7 +36,7 @@ const Pricing = () => {
     gsap.from(packagesRef.current.children, {
       scrollTrigger: {
         trigger: packagesRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 100,
       opacity: 0,
@@ -48,7 +48,7 @@ const Pricing = () => {
     gsap.from(featuresRef.current.children, {
       scrollTrigger: {
         trigger: featuresRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 100,
       opacity: 0,
@@ -60,7 +60,7 @@ const Pricing = () => {
     gsap.from(overviewRef.current.children, {
       scrollTrigger: {
         trigger: overviewRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -72,7 +72,7 @@ const Pricing = () => {
     gsap.from(featureGridRef.current.children, {
       scrollTrigger: {
         trigger: featureGridRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -84,7 +84,7 @@ const Pricing = () => {
     gsap.from(getStartedRef.current, {
       scrollTrigger: {
         trigger: getStartedRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,

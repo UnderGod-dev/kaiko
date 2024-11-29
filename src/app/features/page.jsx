@@ -69,7 +69,7 @@ const Page = () => {
     gsap.from(headerRef.current.children, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -81,7 +81,7 @@ const Page = () => {
     gsap.from(featureCardsRef.current.children, {
       scrollTrigger: {
         trigger: featureCardsRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 100,
       opacity: 0,
@@ -92,7 +92,7 @@ const Page = () => {
     gsap.from(featuresRef.current.children, {
       scrollTrigger: {
         trigger: featuresRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 100,
       opacity: 0,
@@ -104,7 +104,7 @@ const Page = () => {
     gsap.from(overviewRef.current.children, {
       scrollTrigger: {
         trigger: overviewRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -116,7 +116,7 @@ const Page = () => {
     gsap.from(featureGridRef.current.children, {
       scrollTrigger: {
         trigger: featureGridRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -128,7 +128,7 @@ const Page = () => {
     gsap.from(getStartedRef.current, {
       scrollTrigger: {
         trigger: getStartedRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -138,17 +138,17 @@ const Page = () => {
   return (
     <div className="page-padding">
       {/* Header Section */}
-      <div ref={headerRef} className="text-center mb-16">
+      <div ref={headerRef} className="text-center mb-16 tracking-widest">
         <h6 className="text-sm text-green capitalize">FEATURES</h6>
-        <h1 className="text-4xl lg:text-[72px] leading-[.8] font-[550]">
+        <h1 className="text-5xl md:text-8xl font-semibold">
           All accounts. <br />
-          <span className="text-green">one App.</span>
+          <span className="text-teal-300">One App.</span>
         </h1>
-        <p className="text-white/65 mt-6">
-          Discover the range of powerful features designed to <br /> streamline
-          your financial management journey.
+        <p className="text-lg md:text-2xl text-white/65 max-w-screen-sm text-center mx-auto mt-4">
+          Discover the range of powerful features designed to streamline your
+          financial management journey.
         </p>
-        <div className="mx-auto w-fit mt-8">
+        <div className="mx-auto w-2/4 mt-8 md:w-fit">
           <Download />
         </div>
       </div>
@@ -167,7 +167,7 @@ const Page = () => {
                 src={`/phone${i + 1}.svg`}
                 height={350}
                 width={350}
-                className="object-contain object-center size-[500px] md:size-fit"
+                className="object-contain object-center size-[500px]"
               />
             </div>
             <div className="w-full flex justify-center">

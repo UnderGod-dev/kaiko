@@ -21,11 +21,11 @@ const Page = ({ params }) => {
   //   console.log(slug);
   return (
     <div className="page-padding">
-      <div className="max-w-md md:max-w-4xl mx-auto">
+      <div className="max-w-md md:max-w-2xl mx-auto">
         <SectionHeader h6={h6} h1={h3} />
       </div>
 
-      <div className="bg-muted border border-border rounded max-w-4xl mx-auto">
+      <div className="bg-muted border border-border rounded max-w-2xl mx-auto">
         <div className="bg-mutedELight p-4 ">
           <Image
             src={`/${src}.svg`}

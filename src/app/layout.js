@@ -26,9 +26,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body
-        className={`${poppins.variable} ${inter.variable}  antialiased !overflow-x-hidden relative max-w-screen-2xl mx-auto`}
+        className={`${poppins.variable} ${inter.variable}  antialiased !overflow-x-hidden max-w-screen-2xl mx-auto`}
       >
         <Navbar />
         {/* <AnimationProvider> */}
@@ -37,7 +37,7 @@ export default function RootLayout({ children }) {
             src={bgImage}
             className="size-full opacity-10 fixed left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full object-top object-cover -z-10"
           />
-          <div className="absolute -z-10 size-full inset-0 bg-[#00000099]"></div>
+          <div className=" -z-10 size-full fixed inset-0 bg-[#00000099]"></div>
           {children}
         </div>
         {/* </AnimationProvider> */}

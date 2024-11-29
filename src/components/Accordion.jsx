@@ -24,7 +24,7 @@ const Accordion = ({ faqData }) => {
     gsap.from(headerRef.current.children, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -36,7 +36,7 @@ const Accordion = ({ faqData }) => {
     gsap.from(cardRef.current.children, {
       scrollTrigger: {
         trigger: cardRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -49,7 +49,7 @@ const Accordion = ({ faqData }) => {
   //     gsap.from(card, {
   //       scrollTrigger: {
   //         trigger: card,
-  //         start: "top 80%",
+  //         start: "top bottom",
   //       },
   //       y: 100,
   //       opacity: 0,
@@ -62,7 +62,7 @@ const Accordion = ({ faqData }) => {
     gsap.from(bottomRef.current.children, {
       scrollTrigger: {
         trigger: bottomRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,

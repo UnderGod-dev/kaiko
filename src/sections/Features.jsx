@@ -38,7 +38,7 @@ const Features = () => {
     gsap.from(headerRef.current.children, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -50,7 +50,7 @@ const Features = () => {
     gsap.from(dashboardRef.current.children, {
       scrollTrigger: {
         trigger: dashboardRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -62,7 +62,7 @@ const Features = () => {
     gsap.from(analyticsRef.current.children, {
       scrollTrigger: {
         trigger: analyticsRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -74,19 +74,20 @@ const Features = () => {
     gsap.from(bankRef.current.children, {
       scrollTrigger: {
         trigger: bankRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
       duration: 1,
       stagger: 0.2,
+      markers: true,
     });
   });
   useGSAP(() => {
     gsap.from(contractRef.current.children, {
       scrollTrigger: {
         trigger: contractRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -98,7 +99,7 @@ const Features = () => {
     gsap.from(overviewRef.current.children, {
       scrollTrigger: {
         trigger: overviewRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -138,7 +139,7 @@ const Features = () => {
                   height={350}
                   width={350}
                   alt="phone"
-                  className="object-contain"
+                  className="object-contain size-full"
                 />
               </div>
             </div>
@@ -172,7 +173,7 @@ const Features = () => {
         <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {/* Bank Section */}
           <div className="bg-muted" ref={bankRef}>
-            <div className="card-border border-2 border-border bg-mutedELight p-8 px-4 lg:px-8 space-y-4 flex flex-col justify-center items-center">
+            <div className="card-border border-2 border-border bg-mutedELight p-8 px-4 lg:px-8 space-y-4 flex flex-col justify-center items-center h-full">
               <h3 className="text-green font-semibold uppercase">Banks</h3>
               <h4 className="text-3xl lg:text-4xl font-[550]">
                 Bank Account Integration

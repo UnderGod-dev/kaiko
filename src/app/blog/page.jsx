@@ -20,7 +20,7 @@ const Page = () => {
     gsap.from(headerRef.current, {
       scrollTrigger: {
         trigger: headerRef.current,
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 50,
       opacity: 0,
@@ -31,7 +31,7 @@ const Page = () => {
     gsap.from(cardsRef.current, {
       scrollTrigger: {
         trigger: cardsRef.current[0],
-        start: "top 80%",
+        start: "top bottom",
       },
       y: 100,
       opacity: 0,
