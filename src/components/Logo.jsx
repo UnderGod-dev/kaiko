@@ -64,29 +64,33 @@ const Logo = () => {
           className="flex gap-8 items-center flex-shrink-0"
         >
           {logoSrc.map((logo, index) => (
-            <div key={index} className="flex-shrink-0">
-              <Image
-                src={`/${logo}`}
-                height={150}
-                width={150}
-                alt={`Logo ${index + 1}`}
-                className="object-contain"
-              />
-            </div>
+            <React.Fragment key={index}>
+              <div className="flex-shrink-0">
+                <Image
+                  src={`/${logo}`}
+                  height={150}
+                  width={150}
+                  alt={`Logo ${index + 1}`}
+                  className="object-contain"
+                />
+              </div>
+            </React.Fragment>
           ))}
         </div>
         {/* Duplicate set for seamless loop */}
         <div className="flex gap-8 items-center flex-shrink-0">
           {logoSrc.map((logo, index) => (
-            <div key={`duplicate-${index}`} className="flex-shrink-0">
-              <Image
-                src={`/${logo}`}
-                height={150}
-                width={150}
-                alt={`Logo ${index + 1}`}
-                className="object-contain"
-              />
-            </div>
+            <React.Fragment key={index}>
+              <div key={`duplicate-${index}`} className="flex-shrink-0">
+                <Image
+                  src={`/${logo}`}
+                  height={150}
+                  width={150}
+                  alt={`Logo ${index + 1}`}
+                  className="object-contain"
+                />
+              </div>
+            </React.Fragment>
           ))}
         </div>
       </div>

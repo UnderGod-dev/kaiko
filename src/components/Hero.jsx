@@ -1,3 +1,4 @@
+"use client";
 import { PiInfoFill } from "react-icons/pi";
 
 import TextHover from "./TextHover";
@@ -8,10 +9,120 @@ import SecondCard from "./SecondCard";
 import PhoneAnalytics from "./PhoneAnalytics";
 import PhoneContracts from "./PhoneContracts";
 import Test from "./Test";
+import Animation, { featureCardItems } from "./Animation";
+import Image from "next/image";
+import { ScrollTrigger } from "gsap/all";
+import gsap from "gsap";
+import React, { useRef } from "react";
+import { useGSAP } from "@gsap/react";
 const Hero = () => {
+  const cardsItems = [
+    {
+      numbers: "100%",
+      title: "Happy Customers",
+      content:
+        "Every customer delighted with our seamless financial solutions.",
+    },
+    {
+      numbers: "100k+",
+      title: "Users",
+      content:
+        "Join over 100,000 satisfied users enjoying simplified financial management.",
+    },
+    {
+      numbers: "30+",
+      title: "Bank",
+      content: "Access any accounts securely from 30+ leading banks worldwide.",
+    },
+    {
+      numbers: "100%",
+      title: "Secure",
+      content: "Your data is 100% secure with our advanced encryption methods.",
+    },
+  ];
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Create refs for each section
+  const updateRef = useRef(null);
+  const headerRef = useRef(null);
+  const phoneRef = useRef([]);
+  const phoneCardRef = useRef([]);
+  const cardRef = useRef([]);
+
+  useGSAP(() => {
+    // Header animation
+    gsap.from(headerRef.current.children, {
+      scrollTrigger: {
+        trigger: headerRef.current,
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+    });
+  });
+  useGSAP(() => {
+    // Header animation
+    gsap.from(updateRef.current.children, {
+      scrollTrigger: {
+        trigger: updateRef.current,
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+    });
+  });
+  useGSAP(() => {
+    phoneRef.current.forEach((phone, index) => {
+      gsap.from(phone, {
+        scrollTrigger: {
+          trigger: phone,
+          start: "top 80%",
+        },
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        delay: index * 0.1, // Optional: adds slight delay between phone
+      });
+    });
+  });
+  useGSAP(() => {
+    phoneCardRef.current.forEach((phoneCard, index) => {
+      gsap.from(phoneCard, {
+        scrollTrigger: {
+          trigger: phoneCard,
+          start: "top 80%",
+        },
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        delay: index * 0.1, // Optional: adds slight delay between phoneCard
+      });
+    });
+  });
+  useGSAP(() => {
+    cardRef.current.forEach((card, index) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+        },
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        delay: index * 0.1, // Optional: adds slight delay between card
+      });
+    });
+  });
   return (
-    <div className="flex flex-col mt-10 lg:my-20 items-center gap-4 z-10  mx-auto">
-      <div className="inline-flex btn-light p-1.5 gap-2 items-center w-fit">
+    <div className="flex flex-col lg:my-20 items-center gap-4 z-10  mx-auto">
+      <div
+        className="inline-flex btn-light p-1.5 gap-2 items-center w-fit"
+        ref={updateRef}
+      >
         <span className="bg-teal-300 p-0.5 lg:p-2 text-black rounded">
           <PiInfoFill />
         </span>
@@ -19,12 +130,15 @@ const Hero = () => {
           Version 2.2 out now
         </span>
       </div>
-      <div className="text-center tracking-widest my-8 space-y-8">
+      <div
+        className="text-center tracking-widest my-8 space-y-8"
+        ref={headerRef}
+      >
         <h1 className="text-5xl md:text-8xl font-semibold">
           Your Money. <br />
           <span className="text-teal-300">One App.</span>
         </h1>
-        <p className="text-lg md:text-2xl text-white/70 max-w-screen-sm">
+        <p className="text-lg md:text-2xl text-white/65 max-w-screen-sm">
           Your all-in-one solution for organizing bank accounts, tracking
           expenses, and managing contracts seemlessly.
         </p>
@@ -34,81 +148,52 @@ const Hero = () => {
             content="Download"
           />
           <TextHover
-            className="bg-black border border-white/15 rounded-lg btn-light outline-none md:hidden"
+            className="bg-muted border border-white/15 rounded-lg btn-light outline-none md:hidden"
             content="Features"
           />
           <TextHover
-            className="bg-black border border-white/15 p-1 rounded-lg btn-light outline-none hidden md:block"
+            className="bg-muted border border-white/15 p-2.5 rounded-lg btn-light outline-none hidden md:block"
             content="Explore Features"
           />
         </div>
       </div>
       <div className="hidden md:block">
-        <Test />
+        <Animation />
       </div>
-      <div className="relative md:hidden">
-        <div className="flex flex-col items-center">
-          <div className="">
-            <Phone />
+      <div className="flex flex-col gap-8 md:hidden">
+        {featureCardItems.map((card, i) => (
+          <div
+            className={`flex flex-col lg:flex-row gap-8 justify-around ${
+              i === 1 ? "lg:flex-row-reverse" : ""
+            } items-center`}
+            key={i}
+          >
+            <div
+              className="w-full flex justify-center"
+              ref={(el) => (phoneRef.current[i] = el)}
+            >
+              <Image
+                src={`/phone${i + 1}.svg`}
+                height={350}
+                width={350}
+                className="object-contain object-center size-[500px] md:size-fit"
+              />
+            </div>
+            <div
+              className="w-full flex justify-center"
+              ref={(el) => (phoneCardRef.current[i] = el)}
+            >
+              <Card
+                title={card.title}
+                heading={card.heading}
+                paragraph={card.paragraph}
+                l1={card.l1}
+                l2={card.l2}
+                l3={card.l3}
+              />
+            </div>
           </div>
-
-          <Card
-            title="dashboard"
-            heading="Financial 
-Overview"
-            paragraph="Access all your financial data at a glance, streamlining your management process and enhancing your financial decision-making."
-            l1="Real-time balance updates"
-            l2="Transaction categorization"
-            l3="Budget tracking"
-          />
-        </div>
-        <div className="flex flex-col justify-center">
-          <PhoneAnalytics />
-          <Card
-            title="Analytics"
-            heading="Financial
-Insights 
-"
-            paragraph="Gain comprehensive insights into your spending patterns and financial behaviors with detailed analytics, empowering informed financial choices."
-            l1="Expense breakdown charts
-
-"
-            l2="Income trends analysis
-
-"
-            l3="Savings growth tracking
-
-"
-          />
-        </div>
-        <div className="flex flex-col justify-center">
-          <PhoneContracts />
-          <Card
-            title="Contracts
-
-"
-            heading="Contract 
-Management
- 
-"
-            paragraph="Keep track of all your contracts in one place, ensuring clarity and compliance with automated reminders and easy access."
-            l1="Contract expiration alerts
-
-
-
-"
-            l2="Document storage
-
-
-
-"
-            l3="Renewal notifications
-
-
-
-"
-          />
-        </div>
+        ))}
       </div>
 
       <div className="mt-24 mb-16">
@@ -121,27 +206,13 @@ Management
       </div>
 
       <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <SecondCard
-          numbers="30+"
-          title="Bank"
-          content="Access any accounts securely from 30+ leading banks worldwide."
-        />
-        <SecondCard
-          numbers="100%"
-          title="Happy Customers"
-          content="Every customer delighted with our seamless financial solutions."
-        />
-        <SecondCard
-          numbers="100%"
-          title="Secure"
-          content="Your data is 100% secure with our advanced encryption methods.
-"
-        />
-        <SecondCard
-          numbers="100k+"
-          title="Users"
-          content="Join over 100,000 satisfied users enjoying simplified financial management."
-        />
+        {cardsItems.map(({ numbers, title, content }, i) => (
+          <React.Fragment key={i}>
+            <div ref={(el) => (cardRef.current[i] = el)}>
+              <SecondCard numbers={numbers} title={title} content={content} />
+            </div>
+          </React.Fragment>
+        ))}
       </div>
     </div>
   );

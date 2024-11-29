@@ -26,13 +26,13 @@ const MobilePlans = ({ plan }) => {
         </button>
 
         <div className=" my-4">
-          <div className="bg-black space-y-4">
+          <div className="bg-muted space-y-4">
             <h3 className="bg-white/10 rounded p-3 border border-white/15 text-xl font-[550]">
               Dashboard & Tracking
             </h3>
           </div>
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <MdOutlineDashboard className="text-xl" />
               </span>
@@ -49,7 +49,7 @@ const MobilePlans = ({ plan }) => {
           </div>
 
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <AiOutlineTransaction className="text-xl" />
               </span>
@@ -61,7 +61,7 @@ const MobilePlans = ({ plan }) => {
             </p>
           </div>
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <FaEuroSign className="text-xl" />
               </span>
@@ -73,7 +73,7 @@ const MobilePlans = ({ plan }) => {
             </p>
           </div>
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <FaSearchDollar className="text-xl" />
               </span>
@@ -85,7 +85,7 @@ const MobilePlans = ({ plan }) => {
             </p>
           </div>
           <div className="space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <CgInsights className="text-xl" />
               </span>
@@ -94,7 +94,7 @@ const MobilePlans = ({ plan }) => {
             <h4 className="text-lg">Dashboard Insights</h4>
             <p
               className={`mx-auto ${
-                plan == undefined ? "bg-red-400" : ""
+                plan == undefined ? "bg-red" : ""
               } w-fit p-2 rounded`}
             >
               {plan === "premium" ? (
@@ -108,13 +108,13 @@ const MobilePlans = ({ plan }) => {
           </div>
         </div>
         <div className=" mt-8 ">
-          <div className="bg-black space-y-4">
+          <div className="bg-muted space-y-4">
             <h3 className="bg-white/10 rounded p-3 border border-white/15 text-xl font-[550]">
               Customer Support
             </h3>
           </div>
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <MdOutlineDashboard className="text-xl" />
               </span>
@@ -130,7 +130,7 @@ const MobilePlans = ({ plan }) => {
             </p>
           </div>
           <div className="space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <IoCall className="text-xl" />
               </span>
@@ -139,7 +139,7 @@ const MobilePlans = ({ plan }) => {
             <h4 className="text-lg">Phone Support</h4>
             <p
               className={`mx-auto ${
-                plan !== "premium" ? "bg-red-400" : ""
+                plan !== "premium" ? "bg-red" : ""
               } w-fit p-2 rounded`}
             >
               {plan === "premium" ? (
@@ -151,13 +151,13 @@ const MobilePlans = ({ plan }) => {
           </div>
         </div>
         <div className=" mt-8 ">
-          <div className="bg-black space-y-4">
+          <div className="bg-muted space-y-4">
             <h3 className="bg-white/10 rounded p-3 border border-white/15 text-xl font-[550]">
               Advanced Features
             </h3>
           </div>
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <TbAdjustmentsDollar className="text-xl" />
               </span>
@@ -166,7 +166,7 @@ const MobilePlans = ({ plan }) => {
             <h4 className="text-lg">Transaction Categorization</h4>
             <p
               className={`mx-auto ${
-                plan == undefined ? "bg-red-400" : ""
+                plan == undefined ? "bg-red" : ""
               } w-fit p-2 rounded`}
             >
               {plan === "premium" ? (
@@ -179,7 +179,7 @@ const MobilePlans = ({ plan }) => {
             </p>
           </div>
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <IoCall className="text-xl" />
               </span>
@@ -201,7 +201,7 @@ const MobilePlans = ({ plan }) => {
             </p>
           </div>
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <IoNotifications className="text-xl" />
               </span>
@@ -221,7 +221,7 @@ const MobilePlans = ({ plan }) => {
             </p>
           </div>
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <IoDocument className="text-xl" />
               </span>
@@ -230,7 +230,7 @@ const MobilePlans = ({ plan }) => {
             <h4 className="text-lg">Document Storage</h4>
             <p
               className={`mx-auto ${
-                plan == undefined ? "bg-red-400" : ""
+                plan == undefined ? "bg-red" : ""
               } w-fit p-2 rounded`}
             >
               {plan === "premium" ? (
@@ -243,7 +243,7 @@ const MobilePlans = ({ plan }) => {
             </p>
           </div>
           <div className="border-b-2 border-white/10 space-y-4 py-4">
-            <span className="bg-black inline-block">
+            <span className="bg-muted inline-block">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
                 <BsPersonAdd className="text-xl" />
               </span>

@@ -9,9 +9,14 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        muted: "#1b1b1b",
+        black: "#111",
+        blackFade: "#11111170",
+        mutedLight: "#ffffff50",
+        mutedELight: "#ffffff03",
+        border: "#ffffff10",
         green: "#55D6BE",
+        red: "#EE4266",
       },
       animation: {
         "move-left": "move-left 20s linear infinite",

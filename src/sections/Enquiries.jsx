@@ -1,6 +1,4 @@
 import Accordion from "@/components/Accordion";
-import Link from "next/link";
-import { TfiHeadphoneAlt } from "react-icons/tfi";
 
 const Enquiries = () => {
   const faqData = [
@@ -38,15 +36,6 @@ const Enquiries = () => {
   return (
     <section className="space-y-12 flex flex-col justify-center items-center">
       <Accordion faqData={faqData} />
-      <div className="flex items-center justify-center gap-2">
-        <TfiHeadphoneAlt className="bg-green p-2 text-5xl text-black" />
-        <div className="space-y-2">
-          <p className="">More Questions?</p>
-          <Link href={"/"} className="text-green">
-            Chat with our support
-          </Link>
-        </div>
-      </div>
     </section>
   );
 };

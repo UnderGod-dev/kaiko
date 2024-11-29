@@ -37,14 +37,14 @@ const PhoneAnalytics = () => {
           }}
         >
           {/* Inner circle for the donut effect */}
-          <div className="absolute inset-0 rounded-full bg-black size-16 m-auto"></div>
+          <div className="absolute inset-0 rounded-full bg-muted size-16 m-auto"></div>
         </div>
         <div className="flex flex-col text-xs">
           <span className="inline-flex items-center gap-2">
             <div className="size-3 bg-green rounded-full"></div> Rents
           </span>
           <span className="inline-flex items-center gap-2">
-            <div className="size-3 bg-red-500 rounded-full"></div> Travels
+            <div className="size-3 bg-red rounded-full"></div> Travels
           </span>
           <span className="inline-flex items-center gap-2">
             <div className="size-3 bg-[goldenrod] rounded-full"></div> Feedings
@@ -60,7 +60,7 @@ const PhoneAnalytics = () => {
               <span className="">Earnings</span>
             </h3>
             <h3 className="space-x-2 inline-flex items-center">
-              <div className="size-4 bg-red-500 rounded-full"></div>
+              <div className="size-4 bg-red rounded-full"></div>
               <span className="">Expenses</span>
             </h3>
           </div>
@@ -73,49 +73,49 @@ const PhoneAnalytics = () => {
           <div className="flex flex-col items-center gap-2">
             <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
               <div className="h-[30%] w-full bg-green rounded-sm"></div>
-              <div className="h-[50%] w-full bg-red-500"></div>
+              <div className="h-[50%] w-full bg-red"></div>
             </div>
             <span className="">Jan</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
               <div className="h-[75%] w-full bg-green"></div>
-              <div className="h-[20%] w-full bg-red-500"></div>
+              <div className="h-[20%] w-full bg-red"></div>
             </div>
             <span className="">Feb</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
               <div className="h-[20%] w-full bg-green"></div>
-              <div className="h-[35%] w-full bg-red-500"></div>
+              <div className="h-[35%] w-full bg-red"></div>
             </div>
             <span className="">Mar</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
               <div className="h-[29%] w-full bg-green"></div>
-              <div className="h-[47%] w-full bg-red-500"></div>
+              <div className="h-[47%] w-full bg-red"></div>
             </div>
             <span className="">Apr</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
               <div className="h-[53%] w-full bg-green"></div>
-              <div className="h-[35%] w-full bg-red-500"></div>
+              <div className="h-[35%] w-full bg-red"></div>
             </div>
             <span className="">May</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
               <div className="h-[60%] w-full bg-green"></div>
-              <div className="h-[39%] w-full bg-red-500"></div>
+              <div className="h-[39%] w-full bg-red"></div>
             </div>
             <span className="">Jun</span>
           </div>
           <div className="flex flex-col items-center gap-2">
             <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
               <div className="h-[10%] w-full bg-green"></div>
-              <div className="h-[22%] w-full bg-red-500"></div>
+              <div className="h-[22%] w-full bg-red"></div>
             </div>
             <span className="">Jul</span>
           </div>

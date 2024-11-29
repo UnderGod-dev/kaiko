@@ -15,7 +15,7 @@ if (typeof window !== "undefined") {
 }
 
 const img = ["screen1", "screen2", "screen3"];
-const cards = [
+export const featureCardItems = [
   {
     title: "dashboard",
     heading: "Financial Overview",
@@ -102,15 +102,15 @@ const Animation = () => {
   return (
     <div
       ref={containerRef}
-      className="min-h-screen w-screen relative pb-[26em] bg-violegt-500"
+      className="min-h-screen w-full relative pb-[26em] bg-violegt-500 bg-resd-700 mx-auto"
     >
       {/* Main Content */}
-      <div className="relative mx-auto flex flex-col">
+      <div className="mx-auto flex flex-col bg-yeellow-700 max-w-full">
         {/* Phone Container */}
         <div
           ref={phoneRef}
           id="phone"
-          className="min-h-screen flex flex-col justify-center items-center w-screen"
+          className="min-h-screen flex flex-col justify-center items-center "
         >
           <div className="space-y-10 absolute w-full z-10 text-sm text-white/75 font-semibold max-w-screen-lg left-1/2 -translate-x-1/2 top-20">
             <div className="flex justify-between px-12">
@@ -138,7 +138,7 @@ const Animation = () => {
                 className="border border-white/15 w-fit flex items-center p-2 rounded gap-2 animate-move-top delay-1000"
                 style={{ animationDelay: ".5s" }}
               >
-                <span className="bg-red-400 p-1 rounded">
+                <span className="bg-red p-1 rounded">
                   <MdFlightTakeoff />
                 </span>
                 <span className="">+ $4000 Holidays</span>
@@ -147,14 +147,14 @@ const Animation = () => {
                 className="border border-white/15 w-fit flex items-center p-2 rounded gap-2 ml-12 animate-move-top delay-500"
                 style={{ animationDelay: "1s" }}
               >
-                <span className="bg-red-400 p-1 rounded ">
+                <span className="bg-red p-1 rounded ">
                   <GiTrade />
                 </span>
                 <span className="">+ $3590 Dividend</span>
               </div>
             </div>
           </div>
-          <div className="relative size-full flex justify-center items-center">
+          <div className="flex w-full justify-center items-center mx-auto bg-muted">
             <Image
               src={`/frame.svg`}
               alt="screen frame"
@@ -169,22 +169,23 @@ const Animation = () => {
                top-1/2 -translate-y-1/2 
                w-[238px] h-[510px]  // Slightly narrower than frame
                2xl:w-[338px] 2xl:h-[700px] 
-               overflow-hidden rounded-3xl 2xl:rounded-[40px] bg-gradient-to-b from-[#111] to-[#1b1b1b]"
+               overflow-hidden rounded-3xl 2xl:rounded-[40px] bg-gradient-to-b from-[#111] to-muted"
             >
               {img.map((image, i) => (
-                <Image
-                  key={image}
-                  ref={(el) => (screensRef.current[i] = el)}
-                  src={`/${image}.svg`}
-                  alt={`screen ${i + 1}`}
-                  height={400}
-                  width={400}
-                  className={`
+                <React.Fragment key={i}>
+                  <Image
+                    ref={(el) => (screensRef.current[i] = el)}
+                    src={`/${image}.svg`}
+                    alt={`screen ${i + 1}`}
+                    height={400}
+                    width={400}
+                    className={`
           absolute 
           object-center object-cover 
           w-full h-full
         `}
-                />
+                  />
+                </React.Fragment>
               ))}
             </div>
           </div>
@@ -193,7 +194,7 @@ const Animation = () => {
 
       {/* Cards Section */}
       <div className="relative z-10 w-[100vw] lg:w-[80vw] mx-auto max-w-screen-lg">
-        {cards.map((card, i) => (
+        {featureCardItems.map((card, i) => (
           <div
             key={card.title}
             className={`card card-${i + 1} h-screen flex items-center ${

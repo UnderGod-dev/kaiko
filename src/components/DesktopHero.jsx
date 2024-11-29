@@ -36,8 +36,8 @@ if (typeof window !== "undefined") {
 export const Dashboard = () => {
   return (
     <div className="screen absolute left-1.5 inset-0 bg-red-300 size-full flex items-center justify-center">
-      <div className="bg-black border-2r h-[65vh] absolute -left-6 inset-0 w-full bottom-0 z-[1000] text-sm p-1 space-y-4">
-        <div className="  rounded-[2.5em] p-2 px-4 flex flex-col gap-4 items-center bg-white/5  mb-8   mx-2 w-[95%] min-h-full overflow-y-hidden relative">
+      <div className="bg-muted border-2r h-[65vh] absolute -left-6 inset-0 w-full bottom-0 z-[1000] text-sm p-1 space-y-4">
+        <div className="  rounded-[2.5em] p-2 px-4 flex flex-col gap-4 items-center bg-mutedELight  mb-8   mx-2 w-[95%] min-h-full overflow-y-hidden relative">
           <span className="absolute right-4 border-2 rounded  border-white/15 p-1">
             <CiCircleInfo className="font-bold" />
           </span>
@@ -61,7 +61,7 @@ export const Dashboard = () => {
                   <span className="">Earnings</span>
                 </h3>
                 <h3 className="space-x-2 inline-flex items-center">
-                  <div className="size-4 bg-red-500 rounded-full"></div>
+                  <div className="size-4 bg-red rounded-full"></div>
                   <span className="">Expenses</span>
                 </h3>
               </div>
@@ -75,49 +75,49 @@ export const Dashboard = () => {
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[30%] w-full bg-emerald-300 rounded-sm"></div>
-                  <div className="h-[50%] w-full bg-red-500"></div>
+                  <div className="h-[50%] w-full bg-red"></div>
                 </div>
                 <span className="">Jan</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[75%] w-full bg-emerald-300"></div>
-                  <div className="h-[20%] w-full bg-red-500"></div>
+                  <div className="h-[20%] w-full bg-red"></div>
                 </div>
                 <span className="">Feb</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[20%] w-full bg-emerald-300"></div>
-                  <div className="h-[35%] w-full bg-red-500"></div>
+                  <div className="h-[35%] w-full bg-red"></div>
                 </div>
                 <span className="">Mar</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[29%] w-full bg-emerald-300"></div>
-                  <div className="h-[47%] w-full bg-red-500"></div>
+                  <div className="h-[47%] w-full bg-red"></div>
                 </div>
                 <span className="">Apr</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[53%] w-full bg-emerald-300"></div>
-                  <div className="h-[35%] w-full bg-red-500"></div>
+                  <div className="h-[35%] w-full bg-red"></div>
                 </div>
                 <span className="">May</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[60%] w-full bg-emerald-300"></div>
-                  <div className="h-[39%] w-full bg-red-500"></div>
+                  <div className="h-[39%] w-full bg-red"></div>
                 </div>
                 <span className="">Jun</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[10%] w-full bg-emerald-300"></div>
-                  <div className="h-[22%] w-full bg-red-500"></div>
+                  <div className="h-[22%] w-full bg-red"></div>
                 </div>
                 <span className="">Jul</span>
               </div>
@@ -195,7 +195,7 @@ export const Dashboard = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bg-white/5 border-2 border-white/15 rounded-br-[3em] rounded-bl-[3em] w-[94%] -translate-x-[50.5%] left-1/2 -bottom-32 h-fit p-6 flex justify-between gap-4 backdrop-blur text-white/70">
+        <div className="absolute bg-mutedELight border-2 border-white/15 rounded-br-[3em] rounded-bl-[3em] w-[94%] -translate-x-[50.5%] left-1/2 -bottom-32 h-fit p-6 flex justify-between gap-4 backdrop-blur text-white/70">
           <div className="flex flex-col items-center font-semibold text-white">
             <div className="">
               <IoHomeOutline />
@@ -228,8 +228,8 @@ export const Dashboard = () => {
 export const Analytics = () => {
   return (
     <div className="screen absolute left-1.5 inset-0 bg-red-300 size-full flex items-center justify-center">
-      <div className="bg-black border-2r h-[65vh] absolute -left-6 inset-0 w-full bottom-0 z-[1000] text-sm p-1 space-y-4">
-        <div className="  rounded-[2.5em] p-2 px-4 flex flex-col gap-4 items-center bg-white/5  mb-8   mx-2 w-[95%] min-h-full overflow-y-hidden relative pb-20">
+      <div className="bg-muted border-2r h-[65vh] absolute -left-6 inset-0 w-full bottom-0 z-[1000] text-sm p-1 space-y-4">
+        <div className="  rounded-[2.5em] p-2 px-4 flex flex-col gap-4 items-center bg-mutedELight  mb-8   mx-2 w-[95%] min-h-full overflow-y-hidden relative pb-20">
           <div className="text-center flex flex-col justify-between gap-2 w-full">
             <div className="flex justify-between">
               <span className="border-2 rounded  border-white/15 p-1">
@@ -269,14 +269,14 @@ export const Analytics = () => {
               }}
             >
               {/* Inner circle for the donut effect */}
-              <div className="absolute inset-0 rounded-full bg-black size-16 m-auto"></div>
+              <div className="absolute inset-0 rounded-full bg-muted size-16 m-auto"></div>
             </div>
             <div className="flex flex-col text-base font-normal gap-4">
               <span className="inline-flex items-center gap-2">
                 <div className="size-3 bg-green rounded-full"></div> Rents
               </span>
               <span className="inline-flex items-center gap-2">
-                <div className="size-3 bg-red-500 rounded-full"></div> Travels
+                <div className="size-3 bg-red rounded-full"></div> Travels
               </span>
               <span className="inline-flex items-center gap-2">
                 <div className="size-3 bg-[goldenrod] rounded-full"></div>{" "}
@@ -294,7 +294,7 @@ export const Analytics = () => {
                   <span className="">Earnings</span>
                 </h3>
                 <h3 className="space-x-2 inline-flex items-center">
-                  <div className="size-4 bg-red-500 rounded-full"></div>
+                  <div className="size-4 bg-red rounded-full"></div>
                   <span className="">Expenses</span>
                 </h3>
               </div>
@@ -308,56 +308,56 @@ export const Analytics = () => {
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[30%] w-full bg-emerald-300 rounded-sm"></div>
-                  <div className="h-[50%] w-full bg-red-500"></div>
+                  <div className="h-[50%] w-full bg-red"></div>
                 </div>
                 <span className="">Jan</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[75%] w-full bg-emerald-300"></div>
-                  <div className="h-[20%] w-full bg-red-500"></div>
+                  <div className="h-[20%] w-full bg-red"></div>
                 </div>
                 <span className="">Feb</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[20%] w-full bg-emerald-300"></div>
-                  <div className="h-[35%] w-full bg-red-500"></div>
+                  <div className="h-[35%] w-full bg-red"></div>
                 </div>
                 <span className="">Mar</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[29%] w-full bg-emerald-300"></div>
-                  <div className="h-[47%] w-full bg-red-500"></div>
+                  <div className="h-[47%] w-full bg-red"></div>
                 </div>
                 <span className="">Apr</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[53%] w-full bg-emerald-300"></div>
-                  <div className="h-[35%] w-full bg-red-500"></div>
+                  <div className="h-[35%] w-full bg-red"></div>
                 </div>
                 <span className="">May</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[60%] w-full bg-emerald-300"></div>
-                  <div className="h-[39%] w-full bg-red-500"></div>
+                  <div className="h-[39%] w-full bg-red"></div>
                 </div>
                 <span className="">Jun</span>
               </div>
               <div className="flex flex-col items-center gap-2">
                 <div className="h-[12em] w-4 rounded-sm flex flex-col-reverse bg-gray-500/50">
                   <div className="h-[10%] w-full bg-emerald-300"></div>
-                  <div className="h-[22%] w-full bg-red-500"></div>
+                  <div className="h-[22%] w-full bg-red"></div>
                 </div>
                 <span className="">Jul</span>
               </div>
             </div>
           </div>
         </div>
-        <div className="absolute bg-white/5 border-2 border-white/15 rounded-br-[3em] rounded-bl-[3em] w-[94%] -translate-x-[50.5%] left-1/2 -bottom-32 h-fit p-6 flex justify-between gap-4 backdrop-blur text-white/70">
+        <div className="absolute bg-mutedELight border-2 border-white/15 rounded-br-[3em] rounded-bl-[3em] w-[94%] -translate-x-[50.5%] left-1/2 -bottom-32 h-fit p-6 flex justify-between gap-4 backdrop-blur text-white/70">
           <div className="flex flex-col items-center font-semibold ">
             <div className="">
               <IoHomeOutline />
@@ -390,8 +390,8 @@ export const Analytics = () => {
 export const Contracts = () => {
   return (
     <div className="screen absolute left-1.5 inset-0 bg-red-300 size-full flex items-center justify-center">
-      <div className="bg-black border-2r h-[65vh] absolute -left-6 inset-0 w-full bottom-0 z-[1000] text-sm p-1 space-y-4">
-        <div className="  rounded-[2.5em] p-2 px-4 flex flex-col gap-4 items-center bg-white/5  mb-8   mx-0 w-[95%] min-h-full overflow-y-hidden relative pb-20">
+      <div className="bg-muted border-2r h-[65vh] absolute -left-6 inset-0 w-full bottom-0 z-[1000] text-sm p-1 space-y-4">
+        <div className="  rounded-[2.5em] p-2 px-4 flex flex-col gap-4 items-center bg-mutedELight  mb-8   mx-0 w-[95%] min-h-full overflow-y-hidden relative pb-20">
           <div className="flex justify-between w-full pt-1">
             <span className="border-2 rounded  border-white/15 p-1">
               <FaArrowLeft className="font-bold text-xl" />
@@ -529,7 +529,7 @@ export const Contracts = () => {
             </div>
           </div>
         </div>
-        <div className="absolute bg-white/5 border-2 border-white/15 rounded-br-[3em] rounded-bl-[3em] w-[94%] -translate-x-[50.5%] left-1/2 -bottom-32 h-fit p-6 flex justify-between gap-4 backdrop-blur text-white/70">
+        <div className="absolute bg-mutedELight border-2 border-white/15 rounded-br-[3em] rounded-bl-[3em] w-[94%] -translate-x-[50.5%] left-1/2 -bottom-32 h-fit p-6 flex justify-between gap-4 backdrop-blur text-white/70">
           <div className="flex flex-col items-center font-semibold ">
             <div className="">
               <IoHomeOutline />
@@ -615,7 +615,7 @@ const DesktopHero = () => {
   }, []);
 
   return (
-    <div ref={containerRef} className="min-h-screen w-screen relative bg-black">
+    <div ref={containerRef} className="min-h-screen w-screen relative bg-muted">
       {/* Opening Section */}
       <div className="h-screen bg-yellow-300 flex items-center justify-center text-7xl font-bold">
         Opening Section
@@ -655,7 +655,7 @@ const DesktopHero = () => {
                 className="border border-white/15 w-fit flex items-center p-2 rounded gap-2 animate-move-top delay-1000"
                 style={{ animationDelay: ".5s" }}
               >
-                <span className="bg-red-400 p-1 rounded">
+                <span className="bg-red p-1 rounded">
                   <MdFlightTakeoff />
                 </span>
                 <span className="">+ $4000 Holidays</span>
@@ -664,7 +664,7 @@ const DesktopHero = () => {
                 className="border border-white/15 w-fit flex items-center p-2 rounded gap-2 ml-12 animate-move-top delay-500"
                 style={{ animationDelay: "1s" }}
               >
-                <span className="bg-red-400 p-1 rounded ">
+                <span className="bg-red p-1 rounded ">
                   <GiTrade />
                 </span>
                 <span className="">+ $3590 Dividend</span>

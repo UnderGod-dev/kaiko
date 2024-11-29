@@ -8,7 +8,7 @@ import GetStarted from "@/sections/GetStarted";
 
 export default function Home() {
   return (
-    <main className="min-h-[100vh] mx-8">
+    <main className="page-padding">
       <Hero />
       <Features />
       <Testimonial />

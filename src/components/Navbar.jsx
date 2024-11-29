@@ -1,10 +1,11 @@
 "use client";
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import Link from "next/link";
-import { GiWaves, GiHamburgerMenu, GiCancel } from "react-icons/gi";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { BsX } from "react-icons/bs";
+import Image from "next/image";
 
 const navLinks = ["features", "pricing", "blog", "support", "change log"];
 
@@ -59,25 +60,32 @@ const Navbar = () => {
       >
         {/* Logo */}
         <Link href="/" className="flex items-center gap-4">
-          <div className="size-10 bg-teal-400 rounded-lg text-3xl text-black flex justify-center items-center">
-            <GiWaves />
+          <div className="size-12">
+            <Image
+              src={"/logo.svg"}
+              height={40}
+              width={40}
+              alt="logo"
+              className="size-full"
+            />
           </div>
           <span className="font-bold text-base lg:text-xl">KAIKO</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:block">
-          <nav className="w-full border border-white/15 shadow-2xl py-1.5 px-2 backdrop-blur-lg rounded bg-white/5">
+          <nav className="w-full border border-white/15 shadow-2xl py-1.5 px-2 backdrop-blur-lg rounded bg-mutedELight">
             <ul className="flex items-center text-lg">
               {navLinks.map((link, i) => (
-                <li
-                  key={i}
-                  className="capitalize border px-4 py-2 border-transparent hover:border-white/15 transition-all ease-in-out rounded hover:bg-white/10"
-                >
-                  <Link href={`/${link === "pricing" ? "pricing" : ""}`}>
-                    {link}
-                  </Link>
-                </li>
+                <React.Fragment key={i}>
+                  <li className="capitalize border px-4 py-2 border-transparent hover:border-white/15 transition-all ease-in-out rounded hover:bg-white/10">
+                    <Link
+                      href={`/${link === "change log" ? "changelog" : link}`}
+                    >
+                      {link}
+                    </Link>
+                  </li>
+                </React.Fragment>
               ))}
             </ul>
           </nav>
@@ -85,7 +93,7 @@ const Navbar = () => {
 
         {/* Action and Mobile Menu Toggle */}
         <div className="flex items-center gap-4">
-          <button className="bg-teal-400 p-2 rounded-lg text-black/60 font-semibold hidden lg:block">
+          <button className="bg-teal-400 p-2 rounded-lg text-black/60 font-semibold">
             Download
           </button>
 
@@ -106,18 +114,17 @@ const Navbar = () => {
       >
         <ul className="border border-white/15 rounded-lg bg-white/10 backdrop-blur-lg p-6 space-y-2 font-medium text-xl text-center shadow-2xl overflow-hidden mx-1">
           {navLinks.map((link, i) => (
-            <li
-              key={i}
-              className="border border-white/15 bg-black/20 hover:bg-white/10 transition-colors rounded capitalize"
-            >
-              <Link
-                href={`/${link === "pricing" ? "pricing" : ""}`}
-                className="block p-2 w-full text-white/90 hover:text-white"
-                onClick={toggleMenu}
-              >
-                {link}
-              </Link>
-            </li>
+            <React.Fragment key={i}>
+              <li className="border border-white/15 bg-muted/20 hover:bg-white/10 transition-colors rounded capitalize">
+                <Link
+                  href={`/${link === "change log" ? "changelog" : link}`}
+                  className="block p-2 w-full text-white/90 hover:text-white"
+                  onClick={toggleMenu}
+                >
+                  {link}
+                </Link>
+              </li>
+            </React.Fragment>
           ))}
         </ul>
       </nav>

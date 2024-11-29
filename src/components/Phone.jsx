@@ -16,13 +16,13 @@ import { BsArrowRightShort } from "react-icons/bs";
 import { PiCoffee, PiChartLineUpLight } from "react-icons/pi";
 const Phone = () => {
   return (
-    <div className="min-w-[300px] w-full h-[80vh] bg-cover bg-center flex flex-col items-center my-8 md:my-72 bg-black border-2 border-gray-500/90  rounded-[4em] pt-2 shadow-sm shadow-white/70 pb-2 -z-10 relative overflow-hidden md:hidden">
+    <div className="min-w-[300px] w-full h-[80vh] bg-cover bg-center flex flex-col items-center my-8 md:my-72 bg-muted border-2 border-gray-500/90  rounded-[4em] pt-2 shadow-sm shadow-white/70 pb-2 -z-10 relative overflow-hidden md:hidden">
       <div className="screen absolute inset-0"></div>
       <div className="flex gap-1 flex-row-reverse">
         <div className="w-12 h-2 rounded-full bg-white/10"></div>
         <div className="size-2 bg-white/10 rounded-full"></div>
       </div>
-      <div className="  rounded-[40px] p-6 px-2 flex flex-col gap-4 items-center bg-white/5    m-2 mx-auto w-[95%] h-[98%] overflow-y-hidden relative">
+      <div className="  rounded-[40px] p-6 px-2 flex flex-col gap-4 items-center bg-mutedELight    m-2 mx-auto w-[95%] h-[98%] overflow-y-hidden relative">
         <span className="absolute right-4 border-2 rounded  border-white/15 p-1">
           <CiCircleInfo className="font-bold" />
         </span>
@@ -45,7 +45,7 @@ const Phone = () => {
                 <span className="">Earnings</span>
               </h3>
               <h3 className="space-x-2 inline-flex items-center">
-                <div className="size-3 bg-red-500 rounded-full"></div>
+                <div className="size-3 bg-red rounded-full"></div>
                 <span className="">Expenses</span>
               </h3>
             </div>
@@ -58,49 +58,49 @@ const Phone = () => {
             <div className="flex flex-col items-center gap-2">
               <div className="h-[8em] w-3 rounded-sm flex flex-col-reverse bg-gray-500/50">
                 <div className="h-[30%] w-full bg-emerald-300 rounded-sm"></div>
-                <div className="h-[50%] w-full bg-red-500"></div>
+                <div className="h-[50%] w-full bg-red"></div>
               </div>
               <span className="">Jan</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-[8em] w-3 rounded-sm flex flex-col-reverse bg-gray-500/50">
                 <div className="h-[75%] w-full bg-emerald-300"></div>
-                <div className="h-[20%] w-full bg-red-500"></div>
+                <div className="h-[20%] w-full bg-red"></div>
               </div>
               <span className="">Feb</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-[8em] w-3 rounded-sm flex flex-col-reverse bg-gray-500/50">
                 <div className="h-[20%] w-full bg-emerald-300"></div>
-                <div className="h-[35%] w-full bg-red-500"></div>
+                <div className="h-[35%] w-full bg-red"></div>
               </div>
               <span className="">Mar</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-[8em] w-3 rounded-sm flex flex-col-reverse bg-gray-500/50">
                 <div className="h-[29%] w-full bg-emerald-300"></div>
-                <div className="h-[47%] w-full bg-red-500"></div>
+                <div className="h-[47%] w-full bg-red"></div>
               </div>
               <span className="">Apr</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-[8em] w-3 rounded-sm flex flex-col-reverse bg-gray-500/50">
                 <div className="h-[53%] w-full bg-emerald-300"></div>
-                <div className="h-[35%] w-full bg-red-500"></div>
+                <div className="h-[35%] w-full bg-red"></div>
               </div>
               <span className="">May</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-[8em] w-3 rounded-sm flex flex-col-reverse bg-gray-500/50">
                 <div className="h-[60%] w-full bg-emerald-300"></div>
-                <div className="h-[39%] w-full bg-red-500"></div>
+                <div className="h-[39%] w-full bg-red"></div>
               </div>
               <span className="">Jun</span>
             </div>
             <div className="flex flex-col items-center gap-2">
               <div className="h-[8em] w-3 rounded-sm flex flex-col-reverse bg-gray-500/50">
                 <div className="h-[10%] w-full bg-emerald-300"></div>
-                <div className="h-[22%] w-full bg-red-500"></div>
+                <div className="h-[22%] w-full bg-red"></div>
               </div>
               <span className="">Jul</span>
             </div>

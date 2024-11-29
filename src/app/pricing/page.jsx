@@ -3,12 +3,94 @@ import AIMobilePlans from "@/components/AIMobilePlans";
 import DesktopPlans from "@/components/DesktopPlans";
 import MobilePlans from "@/components/MobilePlans";
 import TextHover from "@/components/TextHover";
-import Features from "@/sections/Features";
-import Image from "next/image";
-import { useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import React, { useRef, useState } from "react";
 import { BsCheck } from "react-icons/bs";
 
 const Pricing = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  // Create refs for each section
+  const headerRef = useRef(null);
+  const packagesRef = useRef(null);
+  const featuresRef = useRef(null);
+  const overviewRef = useRef(null);
+  const featureGridRef = useRef(null);
+  const getStartedRef = useRef(null);
+  useGSAP(() => {
+    // Header animation
+    gsap.from(headerRef.current.children, {
+      scrollTrigger: {
+        trigger: headerRef.current,
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+    });
+
+    // Feature cards animation
+    gsap.from(packagesRef.current.children, {
+      scrollTrigger: {
+        trigger: packagesRef.current,
+        start: "top 80%",
+      },
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3,
+    });
+
+    // Features animation
+    gsap.from(featuresRef.current.children, {
+      scrollTrigger: {
+        trigger: featuresRef.current,
+        start: "top 80%",
+      },
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.3,
+    });
+
+    // Overview section animation
+    gsap.from(overviewRef.current.children, {
+      scrollTrigger: {
+        trigger: overviewRef.current,
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+    });
+
+    // Feature grid animation
+    gsap.from(featureGridRef.current.children, {
+      scrollTrigger: {
+        trigger: featureGridRef.current,
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.1,
+    });
+
+    // Get Started section animation
+    gsap.from(getStartedRef.current, {
+      scrollTrigger: {
+        trigger: getStartedRef.current,
+        start: "top 80%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 1,
+    });
+  });
   const [plan, setPlan] = useState("yearly");
   // const [plan, setPlan] = useState("Monthly")
   const freeFeatures = [
@@ -41,16 +123,19 @@ const Pricing = () => {
     "Priority Phone Support",
   ];
   return (
-    <main className="mt-20 px-4 space-y-4 w-screen">
+    <main className="page-padding">
       {/* ===========Top============= */}
-      <div className="px-4 text-center max-w-lg space-y-4 flex flex-col justify-center items-center w-full mx-auto">
+      <div
+        className="px-4 text-center max-w-lg space-y-4 flex flex-col justify-center items-center w-full mx-auto mb-4"
+        ref={headerRef}
+      >
         <h3 className="text-green uppercase font-[550] ">pricing</h3>
         <h2 className="text-5xl font-[550] lg:text-6xl">Pricing Plans</h2>
         <p className="text-white/75 text-lg lg:text-xl">
           Explore our flexible pricing plans designed to meet your needs,
           offering a range of features to streamline your finances.
         </p>
-        <div className="bg-black">
+        <div className="bg-muted">
           <div className="border border-white/15 p-1.5 rounded tracking-wider w-fit bg-white/10 text-sm lg:text-base relative">
             <div className="absolute inset-0 pointer-events-none top-1/2 -translate-y-1/2 bg-yellow-500g w-[85%] left-1/2 -translate-x-1/2">
               {/* Animated Background */}
@@ -79,10 +164,13 @@ const Pricing = () => {
         </div>
       </div>
       {/* ===========packages cards============= */}
-      <div className="grid md:grid-cols-3 gap-4 mx-4">
-        <div className="bg-black">
-          <div className="bg-white/5">
-            <div className="border border-white/15 rounded bg-white/5 p-8 md:p-6">
+      <div
+        className="grid md:grid-cols-3 gap-4 mx-4 2xl:mx-0"
+        ref={packagesRef}
+      >
+        <div className="bg-muted">
+          <div className="bg-mutedELight size-full">
+            <div className="border border-white/15 size-full rounded bg-mutedELight p-8 md:p-6">
               <h3 className="text-green uppercase h-7">starter</h3>
               <h2 className="text-4xl font-[500] py-6">Free</h2>
               <span className="inline-block text-white/75 pb-4 md:text-sm">
@@ -90,15 +178,17 @@ const Pricing = () => {
               </span>
               <ul className="space-y-1">
                 {freeFeatures.map((feature, index) => (
-                  <li
-                    className="flex items-center gap-4 border rounded text-lg border-white/15 p-2 bg-white/10"
-                    key={index}
-                  >
-                    <span className="border rounded text-base lg:text-2xl border-white/15">
-                      <BsCheck />
-                    </span>{" "}
-                    {feature}
-                  </li>
+                  <React.Fragment key={index}>
+                    <li
+                      className="flex items-center gap-4 border rounded text-lg border-white/15 p-2 bg-white/10"
+                      key={index}
+                    >
+                      <span className="border rounded text-base lg:text-2xl border-white/15">
+                        <BsCheck />
+                      </span>{" "}
+                      {feature}
+                    </li>
+                  </React.Fragment>
                 ))}
               </ul>
               <button className="border rounded w-full mt-8 text-base bg-white/10 border-white/15">
@@ -108,9 +198,9 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="bg-black">
-          <div className="bg-white/5">
-            <div className="border border-white/15 rounded bg-white/5 p-8 md:p-6">
+        <div className="bg-muted">
+          <div className="bg-mutedELight size-full">
+            <div className="border border-white/15 size-full rounded bg-mutedELight p-8 md:p-6">
               <div className="flex justify-between h-8">
                 <h3 className="text-green uppercase ">Pro</h3>
                 <div className="text-sm space-x-2">
@@ -119,7 +209,7 @@ const Pricing = () => {
                       -20%
                     </span>
                   )}
-                  <span className="bg-red-500 p-1 rounded">Popular</span>
+                  <span className="bg-red p-1 rounded">Popular</span>
                 </div>
               </div>
 
@@ -132,17 +222,16 @@ const Pricing = () => {
               </span>
               <ul className="space-y-1">
                 {proFeatures.map((feature, index) => (
-                  <div className="bg-black">
-                    <li
-                      className="flex items-center gap-4 border rounded text-lg border-white/15 p-2 bg-white/15"
-                      key={index}
-                    >
-                      <span className="border rounded text-2xl border-white/15">
-                        <BsCheck />
-                      </span>{" "}
-                      {feature}
-                    </li>
-                  </div>
+                  <React.Fragment key={index}>
+                    <div className="bg-muted">
+                      <li className="flex items-center gap-4 border rounded text-lg border-white/15 p-2 bg-white/15">
+                        <span className="border rounded text-2xl border-white/15">
+                          <BsCheck />
+                        </span>{" "}
+                        {feature}
+                      </li>
+                    </div>
+                  </React.Fragment>
                 ))}
               </ul>
               <button className="border rounded w-full mt-8 text-base bg-green text-black border-green">
@@ -152,9 +241,9 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="bg-black">
-          <div className="bg-white/5">
-            <div className="border border-white/15 rounded bg-white/5 p-8 md:p-6">
+        <div className="bg-muted">
+          <div className="bg-mutedELight size-full">
+            <div className="border border-white/15 size-full rounded bg-mutedELight p-8 md:p-6">
               <div className="flex justify-between h-8">
                 <h3 className="text-green uppercase">Premium</h3>
 
@@ -174,15 +263,17 @@ const Pricing = () => {
               </span>
               <ul className="space-y-1">
                 {PremiumFeatures.map((feature, index) => (
-                  <li
-                    className="flex items-center gap-4 border rounded text-lg border-white/15 p-2 bg-white/10"
-                    key={index}
-                  >
-                    <span className="border rounded text-2xl border-white/15">
-                      <BsCheck />
-                    </span>{" "}
-                    {feature}
-                  </li>
+                  <React.Fragment key={index}>
+                    <li
+                      className="flex items-center gap-4 border rounded text-lg border-white/15 p-2 bg-white/10"
+                      key={index}
+                    >
+                      <span className="border rounded text-2xl border-white/15">
+                        <BsCheck />
+                      </span>{" "}
+                      {feature}
+                    </li>
+                  </React.Fragment>
                 ))}
               </ul>
               <button className="border rounded w-full mt-8 text-base border-white/15 bg-white/10">
@@ -194,39 +285,21 @@ const Pricing = () => {
       </div>
       {/* ===========compare plans============= */}
       <div className="md:hidden">
-        <MobilePlans />
-        <MobilePlans plan="pro" />
-        <MobilePlans plan="premium" />
-      </div>
-      <div className="hidden md:block">
-        <DesktopPlans />
-      </div>
-      <div
-        className=""
-        // style={{
-        //   backgroundImage: `url('/frame.svg')`,
-        //   backgroundRepeat: "no-repeat",
-        //   objectFit: "contain",
-        //   objectPosition: "center",
-        // }}
-      >
-        <div className="relative size-full inset-0">
-          <Image
-            src={`/frame.svg`}
-            alt="screen"
-            height={400}
-            width={400}
-            className={`object-center object-contain  h-[520px] bg-red-400y`}
-          />
-
-          <Image
-            src={`/screen1.svg`}
-            alt="screen"
-            height={400}
-            width={400}
-            className={`object-center object-contain  h-[510px] bg-red-400g absolute bottom-2`}
-          />
+        <div className="" ref={featuresRef}>
+          <MobilePlans />
         </div>
+        <MobilePlans />
+        <div className="" ref={overviewRef}>
+          <MobilePlans plan="pro" />
+        </div>
+        <MobilePlans plan="pro" />
+        <div className="" ref={featureGridRef}>
+          {" "}
+          <MobilePlans plan="premium" />
+        </div>
+      </div>
+      <div className="hidden md:block" ref={getStartedRef}>
+        <DesktopPlans />
       </div>
     </main>
   );

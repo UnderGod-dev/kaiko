@@ -5,6 +5,7 @@ import { FaEuroSign, FaSearchDollar } from "react-icons/fa";
 import { CgInsights } from "react-icons/cg";
 import { IoCall, IoDocument, IoNotifications } from "react-icons/io5";
 import { TbAdjustmentsDollar } from "react-icons/tb";
+import React from "react";
 
 const FEATURES = [
   { icon: MdOutlineDashboard, title: "Dashboard Access" },
@@ -70,20 +71,19 @@ const AIMobilePlans = ({ plan = "starter" }) => {
             Dashboard & Tracking
           </h3>
           {FEATURES.map((feature) => (
-            <div
-              className="border-b-2 border-white/10 space-y-4 py-4"
-              key={feature.title}
-            >
-              <span className="bg-black inline-block">
-                <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
-                  <feature.icon className="text-xl" />
+            <React.Fragment key={feature.title}>
+              <div className="border-b-2 border-white/10 space-y-4 py-4">
+                <span className="bg-muted inline-block">
+                  <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
+                    <feature.icon className="text-xl" />
+                  </span>
                 </span>
-              </span>
-              <h4 className="text-lg">{feature.title}</h4>
-              <p className="mx-auto bg-green w-fit p-2 rounded text-black">
-                {getPlanDetails(plan, feature)}
-              </p>
-            </div>
+                <h4 className="text-lg">{feature.title}</h4>
+                <p className="mx-auto bg-green w-fit p-2 rounded text-black">
+                  {getPlanDetails(plan, feature)}
+                </p>
+              </div>
+            </React.Fragment>
           ))}
         </div>
 
@@ -93,24 +93,23 @@ const AIMobilePlans = ({ plan = "starter" }) => {
             Customer Support
           </h3>
           {SUPPORT_FEATURES.map((feature) => (
-            <div
-              className="border-b-2 border-white/10 space-y-4 py-4"
-              key={feature.title}
-            >
-              <span className="bg-black inline-block">
-                <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
-                  <feature.icon className="text-xl" />
+            <React.Fragment key={feature.title}>
+              <div className="border-b-2 border-white/10 space-y-4 py-4">
+                <span className="bg-muted inline-block">
+                  <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
+                    <feature.icon className="text-xl" />
+                  </span>
                 </span>
-              </span>
-              <h4 className="text-lg">{feature.title}</h4>
-              <p className="mx-auto bg-green w-fit p-2 rounded text-black">
-                {plan === "premium"
-                  ? "Priority"
-                  : plan === "pro"
-                  ? "Priority"
-                  : "Basic"}
-              </p>
-            </div>
+                <h4 className="text-lg">{feature.title}</h4>
+                <p className="mx-auto bg-green w-fit p-2 rounded text-black">
+                  {plan === "premium"
+                    ? "Priority"
+                    : plan === "pro"
+                    ? "Priority"
+                    : "Basic"}
+                </p>
+              </div>
+            </React.Fragment>
           ))}
         </div>
 
@@ -120,26 +119,25 @@ const AIMobilePlans = ({ plan = "starter" }) => {
             Advanced Features
           </h3>
           {ADVANCED_FEATURES.map((feature) => (
-            <div
-              className="border-b-2 border-white/10 space-y-4 py-4"
-              key={feature.title}
-            >
-              <span className="bg-black inline-block">
-                <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
-                  <feature.icon className="text-xl" />
+            <React.Fragment key={feature.title}>
+              <div className="border-b-2 border-white/10 space-y-4 py-4">
+                <span className="bg-muted inline-block">
+                  <span className="p-3 rounded bg-white/10 inline-block border border-white/15 -mb-2">
+                    <feature.icon className="text-xl" />
+                  </span>
                 </span>
-              </span>
-              <h4 className="text-lg">{feature.title}</h4>
-              <p className="mx-auto bg-green w-fit p-2 rounded text-black">
-                {plan === "premium" ? (
-                  "Advance"
-                ) : plan === "pro" ? (
-                  "Comprehensive"
-                ) : (
-                  <BsArrowRight className="text-white" />
-                )}
-              </p>
-            </div>
+                <h4 className="text-lg">{feature.title}</h4>
+                <p className="mx-auto bg-green w-fit p-2 rounded text-black">
+                  {plan === "premium" ? (
+                    "Advance"
+                  ) : plan === "pro" ? (
+                    "Comprehensive"
+                  ) : (
+                    <BsArrowRight className="text-white" />
+                  )}
+                </p>
+              </div>
+            </React.Fragment>
           ))}
         </div>
       </div>

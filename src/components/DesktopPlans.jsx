@@ -9,7 +9,7 @@ import { TbAdjustmentsDollar } from "react-icons/tb";
 import TextHover from "./TextHover";
 const DesktopPlans = ({ plan }) => {
   return (
-    <section className="font-[509] px-12">
+    <section className="font-[500] px-12 2xl:px-0">
       <div className="grid grid-cols-3  mt-24 items-end">
         <div className="col-span-1">
           <h3 className="text-3xl font-[550]">
@@ -20,7 +20,7 @@ const DesktopPlans = ({ plan }) => {
         <div className="flex justify-between col-span-2 gap-8 font-[550] tracking-wider">
           <div className="w-full">
             <h3 className="text-center text-xl">Starter</h3>
-            <button className="border rounded w-full mt-4 text-base border-white/15 bg-black">
+            <button className="border rounded w-full mt-4 text-base border-white/15 bg-muted">
               <div className="bg-white/15">
                 <TextHover className="" content="Get Started" />
               </div>
@@ -34,7 +34,7 @@ const DesktopPlans = ({ plan }) => {
           </div>
           <div className="w-full">
             <h3 className="text-center text-xl">Premium</h3>
-            <button className="border rounded mt-4 text-base border-white/15 bg-black w-full">
+            <button className="border rounded mt-4 text-base border-white/15 bg-muted w-full">
               <div className="bg-white/15">
                 <TextHover className="" content="Get Started" />
               </div>
@@ -43,14 +43,14 @@ const DesktopPlans = ({ plan }) => {
         </div>
       </div>
       <div className="">
-        <div className="bg-black my-8">
+        <div className="bg-muted my-8">
           <h2 className="text-xl tracking-wide bg-white/15 p-4 border border-white/15 rounded font-medium">
             Dashboard & Tracking
           </h2>
         </div>
         <div className="grid grid-cols-3 items-center border-b-2 border-white/15 pb-4">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <MdOutlineDashboard className="text-xl" />
               </span>
@@ -66,7 +66,7 @@ const DesktopPlans = ({ plan }) => {
         </div>
         <div className="grid grid-cols-3 items-center border-b-2 border-white/15 pb-4">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <AiOutlineTransaction className="text-xl" />
               </span>
@@ -88,7 +88,7 @@ const DesktopPlans = ({ plan }) => {
         </div>
         <div className="grid grid-cols-3 items-center border-b-2 border-white/15 pb-4">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <FaEuroSign className="text-xl" />
               </span>
@@ -110,7 +110,7 @@ const DesktopPlans = ({ plan }) => {
         </div>
         <div className="grid grid-cols-3 items-center border-b-2 border-white/15 pb-4">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <FaSearchDollar className="text-xl" />
               </span>
@@ -132,7 +132,7 @@ const DesktopPlans = ({ plan }) => {
         </div>
         <div className="grid grid-cols-3 items-center pb-4 mt-6">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <CgInsights className="text-xl" />
               </span>
@@ -142,7 +142,7 @@ const DesktopPlans = ({ plan }) => {
           </div>
           <div className="col-span-2 text-center flex justify-between text-lg items-center">
             <div className="w-full">
-              <p className=" bg-red-400 w-fit mx-auto p-2 rounded">
+              <p className=" bg-red w-fit mx-auto p-2 rounded">
                 <RxCross2 className="mx-auto text-2xl " />
               </p>
             </div>
@@ -154,14 +154,14 @@ const DesktopPlans = ({ plan }) => {
       </div>
       {/*======================= Customer Support ================ */}
       <div className="">
-        <div className="bg-black my-8">
+        <div className="bg-muted my-8">
           <h2 className="text-xl tracking-wide bg-white/15 p-4 border border-white/15 rounded font-medium">
             Customer Support
           </h2>
         </div>
         <div className="grid grid-cols-3 items-center border-b-2 border-white/15 pb-4">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <MdEmail className="text-xl" />
               </span>
@@ -177,7 +177,7 @@ const DesktopPlans = ({ plan }) => {
         </div>
         <div className="grid grid-cols-3 items-center pb-4 mt-6">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <IoCall className="text-xl" />
               </span>
@@ -187,12 +187,12 @@ const DesktopPlans = ({ plan }) => {
           </div>
           <div className="col-span-2 text-center flex justify-between items-center text-lg">
             <div className="w-full">
-              <p className=" bg-red-400 w-fit mx-auto p-2 rounded">
+              <p className=" bg-red w-fit mx-auto p-2 rounded">
                 <RxCross2 className="mx-auto text-2xl " />
               </p>
             </div>
             <div className="w-full">
-              <p className=" bg-red-400 w-fit mx-auto p-2 rounded">
+              <p className=" bg-red w-fit mx-auto p-2 rounded">
                 <RxCross2 className="mx-auto text-2xl " />
               </p>
             </div>
@@ -203,14 +203,14 @@ const DesktopPlans = ({ plan }) => {
       </div>
       {/* =============Advance Feautures ======================== */}
       <div className="">
-        <div className="bg-black my-8">
+        <div className="bg-muted my-8">
           <h2 className="text-xl tracking-wide bg-white/15 p-4 border border-white/15 rounded font-medium">
             Advance Features
           </h2>
         </div>
         <div className="grid grid-cols-3 items-center pb-4 mt-6">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <TbAdjustmentsDollar className="text-xl" />
               </span>
@@ -220,7 +220,7 @@ const DesktopPlans = ({ plan }) => {
           </div>
           <div className="col-span-2 text-center flex justify-between items-center text-lg">
             <div className="w-full">
-              <p className=" bg-red-400 w-fit mx-auto p-2 rounded">
+              <p className=" bg-red w-fit mx-auto p-2 rounded">
                 <RxCross2 className="mx-auto text-2xl " />
               </p>
             </div>
@@ -232,7 +232,7 @@ const DesktopPlans = ({ plan }) => {
 
         <div className="grid grid-cols-3 items-center pb-4 mt-6">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <IoNotifications className="text-xl" />
               </span>
@@ -257,7 +257,7 @@ const DesktopPlans = ({ plan }) => {
         </div>
         <div className="grid grid-cols-3 items-center pb-4 mt-6">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <CgInsights className="text-xl" />
               </span>
@@ -278,7 +278,7 @@ const DesktopPlans = ({ plan }) => {
         </div>
         <div className="grid grid-cols-3 items-center pb-4 mt-6">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <IoDocument className="text-xl" />
               </span>
@@ -288,7 +288,7 @@ const DesktopPlans = ({ plan }) => {
           </div>
           <div className="col-span-2 text-center flex justify-between items-center text-lg">
             <div className="w-full">
-              <p className=" bg-red-400 w-fit mx-auto p-2 rounded">
+              <p className=" bg-red w-fit mx-auto p-2 rounded">
                 <RxCross2 className="mx-auto text-2xl " />
               </p>
             </div>
@@ -299,7 +299,7 @@ const DesktopPlans = ({ plan }) => {
         </div>
         <div className="grid grid-cols-3 items-center border-b-2 border-white/15 pb-4">
           <div className="flex col-span-1 gap-4  items-center">
-            <span className="bg-black inline-flex">
+            <span className="bg-muted inline-flex">
               <span className="p-3 rounded bg-white/10 inline-block border border-white/15 ">
                 <BsPersonAdd className="text-xl" />
               </span>
