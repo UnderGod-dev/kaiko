@@ -2,13 +2,9 @@
 import { PiInfoFill } from "react-icons/pi";
 
 import TextHover from "./TextHover";
-import Phone from "./Phone";
 import Card from "./Card";
 import Logo from "./Logo";
 import SecondCard from "./SecondCard";
-import PhoneAnalytics from "./PhoneAnalytics";
-import PhoneContracts from "./PhoneContracts";
-import Test from "./Test";
 import Animation, { featureCardItems } from "./Animation";
 import Image from "next/image";
 import { ScrollTrigger } from "gsap/all";
@@ -63,7 +59,6 @@ const Hero = () => {
     });
   });
   useGSAP(() => {
-    // Header animation
     gsap.from(updateRef.current.children, {
       scrollTrigger: {
         trigger: updateRef.current,
@@ -85,7 +80,7 @@ const Hero = () => {
         y: 100,
         opacity: 0,
         duration: 1,
-        delay: index * 0.1, // Optional: adds slight delay between phone
+        // delay: index * 0.1, // Optional: adds slight delay between phone
       });
     });
   });
